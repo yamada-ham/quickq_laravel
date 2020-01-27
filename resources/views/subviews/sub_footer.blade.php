@@ -1,5 +1,5 @@
 <footer>
   <div class="inFooterBox">
-    <p>&copy; QuickQ</p>
+    <p>&copy; {{Config('const.QUICKQ.name')}}</p>
   </div>
 </footer>

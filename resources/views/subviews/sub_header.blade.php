@@ -5,7 +5,7 @@
       </div>
       <div class="inTitleBox">
         <h1><a href="">
-          QuickQ
+          {{Config('const.QUICKQ.name')}}
         </a></h1>
       </div>
       <div class="loginInfoBox">
