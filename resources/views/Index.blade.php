@@ -5,14 +5,14 @@
 <title>{{Config('const.QUICKQ.name')}}</title>
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="{{asset('css/app.css')}}">
-{{-- <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> --}}
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
 @include('subviews.sub_header')
 <div class="topImgBox">
   <div class="inTopImgBox">
-    <img src = "{{asset('image')}}/quickq_title.png">
+    <img src = "{{asset('images/quickq_title.png')}}">
   </div>
 </div>
 <ul class="questLimitBox">

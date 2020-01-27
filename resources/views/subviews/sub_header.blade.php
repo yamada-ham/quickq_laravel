@@ -1,7 +1,7 @@
 <header class="">
   <div class="inHeader clear">
       <div class="drawer" id="menubtn">
-        <img src="./image/icon/btnOpen.png">
+        <img src="{{asset("images/icon/btnOpen.png")}}">
       </div>
       <div class="inTitleBox">
         <h1><a href="">
