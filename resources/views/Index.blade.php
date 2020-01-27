@@ -19,18 +19,20 @@
   <li class="newListBox">
     <div class="inNewListBox">
       <div><h2>最新アンケート</h2></div>
-      {{-- <ul>
-        @foreach($popularLimit5 as $quest)
-          <li><a>{{$quest->getQuestTitle()}}</a></li>
+      <ul>
+        @foreach($newLimit5 as $quest)
+          <li><a>{{$quest->questTitle}}</a></li>
         @endforeach
-      </ul> --}}
+      </ul>
     </div>
   </li><!-- newListBox -->
   <li class="newListBox">
     <div class="inNewListBox">
       <div><h2>人気アンケート</h2></div>
       <ul>
-
+        @foreach($popularLimit5 as $quest)
+          <li><a>{{$quest->questTitle}}</a></li>
+        @endforeach
       </ul>
     </div>
   </li><!-- newListBox -->
@@ -62,5 +64,6 @@
 
 
 {{-- <script type="text/javascript" src="script.js"></script> --}}
+<script src="{{asset('./js/app.js')}}"></script>
 </body>
 </html>
