@@ -9,7 +9,58 @@
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script> --}}
 </head>
 <body>
-<p class="hey">やっほー</p>
+@include('subviews.sub_header')
+<div class="topImgBox">
+  <div class="inTopImgBox">
+    <img src = "{{asset('image')}}/quickq_title.png">
+  </div>
+</div>
+<ul class="questLimitBox">
+  <li class="newListBox">
+    <div class="inNewListBox">
+      <div><h2>最新アンケート</h2></div>
+      {{-- <ul>
+        @foreach($popularLimit5 as $quest)
+          <li><a>{{$quest->getQuestTitle()}}</a></li>
+        @endforeach
+      </ul> --}}
+    </div>
+  </li><!-- newListBox -->
+  <li class="newListBox">
+    <div class="inNewListBox">
+      <div><h2>人気アンケート</h2></div>
+      <ul>
+
+      </ul>
+    </div>
+  </li><!-- newListBox -->
+</ul>
+<div class="categoryBox">
+    <div class="inCategoryBox">
+    {{-- <ul class="accordion_ul clear">
+      @foreach($category as $key => $arr)
+        <li class="accordion_li">
+          <section>
+          <h1>{{$key}}</h1>
+          <ul>
+            @foreach($arr as $val)
+              <li><a href="">{{$val}}</a></li>
+            @endforeach
+          </ul>
+          </section>
+      </li>
+    @endforeach
+    </ul> --}}
+  </div>
+</div>
+
+
+<div class='createBox'>
+  <p><a href="createQuest.php">+</a></p>
+</div>
+@include('subviews.sub_footer')
+
+<!-- categoryBox -->
 {{-- <script type="text/javascript" src="script.js"></script> --}}
 </body>
 </html>
