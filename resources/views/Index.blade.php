@@ -37,22 +37,22 @@
 </ul>
 <div class="categoryBox">
     <div class="inCategoryBox">
-    {{-- <ul class="accordion_ul clear">
-      @foreach($category as $key => $arr)
+    <ul class="accordion_ul clear">
+      @foreach($categories as $key => $arr)
         <li class="accordion_li">
           <section>
           <h1>{{$key}}</h1>
           <ul>
-            @foreach($arr as $val)
-              <li><a href="">{{$val}}</a></li>
+            @foreach($arr as $category)
+              <li><a href="">{{$category}}</a></li>
             @endforeach
           </ul>
           </section>
       </li>
     @endforeach
-    </ul> --}}
+    </ul>
   </div>
-</div>
+</div><!-- categoryBox -->
 
 
 <div class='createBox'>
@@ -60,7 +60,7 @@
 </div>
 @include('subviews.sub_footer')
 
-<!-- categoryBox -->
+
 {{-- <script type="text/javascript" src="script.js"></script> --}}
 </body>
 </html>
