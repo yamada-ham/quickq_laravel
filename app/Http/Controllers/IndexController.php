@@ -7,6 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class IndexController extends Controller
 {
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
     public function get(){
       $popularLimit5 = DB::select("select code,questTitle from quests order by numberOfResponses desc limit 5");
       // $popularLimit5 = DB::table('quests')->orderby("numberOfResponses","desc")->limit(5)->get(["code","questTitle"]);
