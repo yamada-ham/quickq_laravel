@@ -158,7 +158,7 @@ function drwer(){
   var menu = $('.drwerMenuBox');
 	var btn = $('#menubtn');
 
-		$('.overlay').prepend('<div class="btnCloseBox"><img src="./image/icon/btnClose.png"></div>');
+		$('.overlay').prepend('<div class="btnCloseBox"><img src="./images/icon/btnClose.png"></div>');
 
 
 	btn.on('click',function(){
