@@ -17,39 +17,33 @@
     <span class="">{{ $errors->first('email') }}</span>
   @endif
 
+<label for="password" class="">{{ __('Password') }}</label>
 
 
+<input id="password" type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
-      <label for="password" class="">{{ __('Password') }}</label>
-
-
-      <input id="password" type="password" class="{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-      @if ($errors->has('password'))
-          <span class="" role="alert">
-              <strong>{{ $errors->first('password') }}</strong>
-          </span>
-      @endif
+@if ($errors->has('password'))
+<span class="" role="alert">
+<strong>{{ $errors->first('password') }}</strong>
+</span>
+@endif
 
 
+    <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
+    <label class="" for="remember">
+        {{ __('Remember Me') }}
+    </label>
 
-                    <input class="" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+<button type="submit" class="">
+    {{ __('Login') }}
+</button>
 
-                    <label class="" for="remember">
-                        {{ __('Remember Me') }}
-                    </label>
-
-
-                <button type="submit" class="">
-                    {{ __('Login') }}
-                </button>
-
-                @if (Route::has('password.request'))
-                    <a class="" href="{{ route('password.request') }}">
-                        {{ __('Forgot Your Password?') }}
-                    </a>
-                @endif
+@if (Route::has('password.request'))
+    <a class="" href="{{ route('password.request') }}">
+        {{ __('Forgot Your Password?') }}
+    </a>
+@endif
 
 </form>
 

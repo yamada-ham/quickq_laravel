@@ -7,8 +7,9 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('const.QUICKQ.name') }}</title>
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
-    <script src="{{ asset('js/app.js') }}" defer></script>
 
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
@@ -45,5 +46,6 @@
         @yield('content')
     </main>
 </div>
+    <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
