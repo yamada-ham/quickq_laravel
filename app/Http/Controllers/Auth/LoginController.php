@@ -25,6 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
+    //ログインした直後のリダイレクト先
     protected $redirectTo = '/';
 
     /**
