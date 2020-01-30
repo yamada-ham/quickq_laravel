@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('const.QUICKQ.name') }}</title>
     <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -24,7 +22,7 @@
     @if (Route::has('register'))
             <a class="" href="{{ route('register') }}">{{ __('Register') }}</a>
     @endif
-@else
+{{-- @else
     <li >
         <a>{{ Auth::user()->name }}</a>
 
@@ -39,10 +37,10 @@
                 @csrf
             </form>
         </div>
-    </li>
+    </li> --}}
 @endguest
 
-    <main class="py-4">
+    <main>
         @yield('content')
     </main>
 </div>
