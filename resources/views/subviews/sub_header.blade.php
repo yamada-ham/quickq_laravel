@@ -10,7 +10,7 @@
       </div>
       <div class="loginInfoBox">
         @if(Auth::check())
-        <p><a><span class="greet">{{$user->name}}</span><span class="account">Myアカウント</span></a></p>
+        <p><a><span class="greet">{{Auth::user()->name}}</span><span class="account">Myアカウント</span></a></p>
         @else
           <p><a href="{{route('login')}}">ログイン</a></p>
         @endif
@@ -21,7 +21,7 @@
 <nav class="drwerMenuBox">
   <div class="inDrwerMenuBox">
     @if(Auth::check())
-      <h2 class="greet">Hello.{{$user->name}}さん</h2>
+      <h2 class="greet">Hello.{{Auth::user()->name}}さん</h2>
       <ul>
       <li><a href="userAccount.php">アカウント管理</a></li>
       <li><a href="createQuest.php">アンケートを作成する</a></li>

@@ -1,13 +1,20 @@
 @extends('layouts.main')
 @section('content')
+<p>@isset($msg){{$msg}} @endisset</p>
+@if(count($errors) > 0)
+  @foreach($errors->all() as $error)
+    {{$error}}
+  @endforeach
+@endif
 <div class="createQuestBox">
   <div class="inCreateQuestBox">
-    <form action="" method='get' id="signup" name="signup">
+    <form action="" method='POST' id="signup" name="signup">
+      @csrf
       <div class="questTitleBox">
         <p>1.アンケートの内容を記述してください。</p>
-        <textarea name="questTitle" class="questTitle" placeholder="例1:カレーにカボチャを入れる？&#13;&#10;例2:好きな種類の音楽は？" maxlength="200">
-</textarea>
+        <textarea name="questTitle" class="questTitle" placeholder="例1:カレーにカボチャを入れる？&#13;&#10;例2:好きな種類の音楽は？" maxlength="200"></textarea>
 <span class="questTitleTtextLength">0/200</span>
+      <p class='err'>{{$errors->first('questTitle')}}</p>
       </div>
 
       <div class="choicesListBox clear">
@@ -17,29 +24,37 @@
             <li ><input type="text" name="choice[]" value="" placeholder="未入力"></li>
 
         </ul>
+        <p class='err'>{{$errors->first('choice.*')}}</p>
+
         <div class="addRemoveChoiceBox">
           <label><input type="button" id="addChoiceInput" value="+"></label>
           <label><input type="button" id="removeChoiceInput" value="−"></label>
         </div>
+
       </div>
 
       <div class="createCategoryBox">
-        <p>3.カテゴリーを選択してください。</p>
+        <p>3.カテゴリーを二つ選択してください。</p>
         <div class="parentInCreateCategoryBox">
-          <select class="parentCategory">
+          <select name="parentCategory" class="parentCategory">
             <option value="" selected="selected" disabled>選択</option>
-
-          <option value=""></option>
-
+            @foreach($categories as $key => $arr)
+              <option value="{{$key}}">{{$key}}</option>
+            @endforeach
           </select>
         </div>
 
-        <div class="childInCreateCategoryBox hidden">
-          <select name="category" class="childCategory" disabled>
+        <div class="childInCreateCategoryBox">
+          <select name="childCategory" class="childCategory" disabled>
             <option value="" selected="selected" disabled>選択</option>
-                <option value="" data-val=""></option>
+            @foreach($categories as $key => $arr)
+              @foreach($arr as $val)
+                <option value="{{$val}}" data-val="{{$key}}">{{$val}}</option>
+              @endforeach
+            @endforeach
           </select>
         </div>
+        <p class='err'>{{$errors->first('childCategory')}}</p>
       </div>
       <div class="errCreateQuestBox">
         <p class="err"></p>

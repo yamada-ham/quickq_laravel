@@ -3,10 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\CreateQuestRequest;
 class CreateQuestController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+
     public function get(){
-      return view('pages.index');
+      return view('pages.createQuest');
+    }
+
+    public function post(CreateQuestRequest $request){
+      $msg = '成功';
+      return view('pages.createQuest',['msg'=>$msg]);
     }
 }
