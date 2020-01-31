@@ -25,7 +25,7 @@ div.contentsBox{
 
         }
         input{
-          &[type='text']{
+          &[type='text'],&[type='email']{
             font-size:1rem;
             box-sizing: border-box;
             padding: 5px;
@@ -117,10 +117,6 @@ div.contentsBox{
             }
           }
 
-    }
-    p.errBox{
-      color:#ff0000;
-      padding-bottom: 4px;
     }
 
     div.signupBox{
