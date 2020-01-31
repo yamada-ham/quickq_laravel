@@ -60,6 +60,9 @@ select {
   margin: 0;
 }
 
+$linkColor : #0e00aa;
+$linkHoverColor :#756be4;
+
 $breakpoints: (
     xs: "only screen and (min-width: 320px)",
     s: "only screen and (min-width: 575px)",

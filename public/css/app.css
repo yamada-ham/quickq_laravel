@@ -579,7 +579,16 @@ div.contentsBox div.inContentsBox form div.inputTextBox input[type=text]:focus {
   box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
 }
 
-div.contentsBox div.inContentsBox form div.inputTextBox input[type=password] {
+div.contentsBox div.inContentsBox form div.inputPasswordBox {
+  margin-bottom: 20px;
+}
+
+div.contentsBox div.inContentsBox form div.inputPasswordBox label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+div.contentsBox div.inContentsBox form div.inputPasswordBox p.typePassword input[type=password] {
   font-size: 1rem;
   box-sizing: border-box;
   padding: 5px;
@@ -589,26 +598,39 @@ div.contentsBox div.inContentsBox form div.inputTextBox input[type=password] {
   border-radius: 4px;
 }
 
-div.contentsBox div.inContentsBox form div.inputTextBox input[type=password]:focus {
+div.contentsBox div.inContentsBox form div.inputPasswordBox p.typePassword input[type=password]:focus {
   border: 1px solid #da3c41;
   outline: none;
   box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
 }
 
-div.contentsBox div.inContentsBox p.errBox {
-  color: #ff0000;
-  padding-bottom: 4px;
+div.contentsBox div.inContentsBox form div.inputPasswordBox p.password_request {
+  text-align: right;
+}
+
+div.contentsBox div.inContentsBox form div.inputPasswordBox p.password_request a {
+  display: block;
+  padding: 4px 2px;
+  color: #0e00aa;
+}
+
+div.contentsBox div.inContentsBox form div.inputPasswordBox p.password_request a:hover {
+  color: #756be4;
+}
+
+div.contentsBox div.inContentsBox form div.submitBox {
+  margin-bottom: 14px;
 }
 
 @media only screen and (min-width: 991px) {
-  div.contentsBox div.inContentsBox div.submitBox {
+  div.contentsBox div.inContentsBox form div.submitBox {
     width: 50%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-div.contentsBox div.inContentsBox div.submitBox p.inSubmitBox input[type=submit] {
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit] {
   display: inline-block;
   border-radius: 5%;
   font-size: 1rem;
@@ -621,12 +643,31 @@ div.contentsBox div.inContentsBox div.submitBox p.inSubmitBox input[type=submit]
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
   opacity: 0.9;
-  margin-bottom: 30px;
   width: 100%;
 }
 
-div.contentsBox div.inContentsBox div.submitBox p.inSubmitBox input[type=submit]:hover {
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit]:hover {
   opacity: 1;
+}
+
+div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox {
+  margin-top: 6px;
+  margin-left: 8px;
+}
+
+div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox label {
+  font-size: 1rem;
+}
+
+div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox label input[type=checkbox] {
+  vertical-align: middle;
+  -webkit-transform: translate(0%, -25%);
+          transform: translate(0%, -25%);
+}
+
+div.contentsBox div.inContentsBox p.errBox {
+  color: #ff0000;
+  padding-bottom: 4px;
 }
 
 @media only screen and (min-width: 991px) {
