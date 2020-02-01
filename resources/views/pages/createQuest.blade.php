@@ -47,7 +47,7 @@
           <select name="parentCategory" class="parentCategory">
             <option value="" selected="selected" disabled>選択</option>
             @foreach($categories as $key => $arr)
-              <option value="{{$key}}">{{$key}}</option>
+              <option value="{{$key}}" @if(old('parentCategory') == $key) selected @endif>{{$key}}</option>
             @endforeach
           </select>
         </div>
@@ -57,7 +57,7 @@
             <option value="" selected="selected" disabled>選択</option>
             @foreach($categories as $key => $arr)
               @foreach($arr as $val)
-                <option value="{{$val}}" data-val="{{$key}}">{{$val}}</option>
+                <option value="{{$val}}" data-val="{{$key}}" @if(old('childCategory') == $val) selected @endif>{{$val}}</option>
               @endforeach
             @endforeach
           </select>
