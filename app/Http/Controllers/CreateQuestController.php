@@ -31,6 +31,7 @@ class CreateQuestController extends Controller
       }
       echo $choiceCount;
       echo $choiceText;
+      echo $request->childCategory;
 
       $param =[
         'questTitle' => $request->questTitle,

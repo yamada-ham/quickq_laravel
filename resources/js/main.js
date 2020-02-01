@@ -28,7 +28,13 @@ function createCategory(){
   var $childCategory = $('.childCategory');
 var original = $childCategory.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
 
-$('.parentCategory').change(function() {
+//htmlが再読み込みされたときに状態を保持しておく
+if ($('.parentCategory').val() == "") {
+  $childCategory.prop('disabled', true);
+} else {
+  $childCategory.prop('disabled',false);
+}
+$('.parentCategory').on('change load',function() {
 
   //選択された親のvalueを取得し変数に入れる
   var val1 = $(this).val();
@@ -46,13 +52,13 @@ $('.parentCategory').change(function() {
   //親側のselect要素が未選択の場合、都道府県をdisabledにする
   if ($(this).val() == "") {
     $createCategoryBox.addClass('hidden');
-    $childCategory.attr('disabled', 'disabled');
+    $childCategory.prop('disabled', true);
   } else {
     $createCategoryBox.removeClass('hidden');
-    $childCategory.removeAttr('disabled');
+    $childCategory.prop('disabled',false);
   }
-
 });
+
 }
 function greetInDrwer(){
   let greets = document.querySelectorAll('.greet');

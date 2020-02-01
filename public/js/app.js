@@ -12652,8 +12652,15 @@ function createCategory() {
   var $createCategoryBox = $('.childInCreateCategoryBox');
   var $childCategory = $('.childCategory');
   var original = $childCategory.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
+  //htmlが再読み込みされたときに状態を保持しておく
 
-  $('.parentCategory').change(function () {
+  if ($('.parentCategory').val() == "") {
+    $childCategory.prop('disabled', true);
+  } else {
+    $childCategory.prop('disabled', false);
+  }
+
+  $('.parentCategory').on('change load', function () {
     //選択された親のvalueを取得し変数に入れる
     var val1 = $(this).val(); //削除された要素をもとに戻すため.html(original)を入れておく
 
@@ -12668,10 +12675,10 @@ function createCategory() {
 
     if ($(this).val() == "") {
       $createCategoryBox.addClass('hidden');
-      $childCategory.attr('disabled', 'disabled');
+      $childCategory.prop('disabled', true);
     } else {
       $createCategoryBox.removeClass('hidden');
-      $childCategory.removeAttr('disabled');
+      $childCategory.prop('disabled', false);
     }
   });
 }
