@@ -48,6 +48,6 @@
 
 
 <div class='createBox'>
-  <p><a href="createQuest.php">+</a></p>
+  <p><a href="{{asset('./createQuest')}}">+</a></p>
 </div>
 @endsection

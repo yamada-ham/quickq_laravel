@@ -1,30 +1,33 @@
 @extends('layouts.main')
 @section('content')
-<p>@isset($msg){{$msg}} @endisset</p>
-@if(count($errors) > 0)
-  @foreach($errors->all() as $error)
-    {{$error}}
-  @endforeach
-@endif
 <div class="createQuestBox">
   <div class="inCreateQuestBox">
     <form action="" method='POST' id="signup" name="signup">
       @csrf
       <div class="questTitleBox">
         <p>1.アンケートの内容を記述してください。</p>
-        <textarea name="questTitle" class="questTitle" placeholder="例1:カレーにカボチャを入れる？&#13;&#10;例2:好きな種類の音楽は？" maxlength="200"></textarea>
+
+        @if($errors->has('questTitle'))
+        <div class="errCreateQuestBox">
+        <p class='err'>{{$errors->first('questTitle')}}</p></div>
+      @endif
+        <textarea name="questTitle" class="questTitle" placeholder="例1:カレーにカボチャを入れる？&#13;&#10;例2:好きな種類の音楽は？" maxlength="200">{{old('questTitle')}}</textarea>
 <span class="questTitleTtextLength">0/200</span>
-      <p class='err'>{{$errors->first('questTitle')}}</p>
+
       </div>
 
       <div class="choicesListBox clear">
         <p>2.アンケートの選択欄を作成してください。</p>
+        @if($errors->has('choice.*'))
+        <div class="errCreateQuestBox">
+          <p class='err'>{{$errors->first('choice.*')}}</p>
+        </div>
+        @endif
+
         <ul id="choicesList">
-
-            <li ><input type="text" name="choice[]" value="" placeholder="未入力"></li>
-
+            <li ><input type="text" name="choice[]" value="{{old('choice.0')}}" placeholder="未入力"></li>
         </ul>
-        <p class='err'>{{$errors->first('choice.*')}}</p>
+
 
         <div class="addRemoveChoiceBox">
           <label><input type="button" id="addChoiceInput" value="+"></label>
@@ -35,6 +38,11 @@
 
       <div class="createCategoryBox">
         <p>3.カテゴリーを二つ選択してください。</p>
+        @if($errors->has('childCategory'))
+        <div class="errCreateQuestBox">
+          <p class='err'>{{$errors->first('childCategory')}}</p>
+        </div>
+        @endif
         <div class="parentInCreateCategoryBox">
           <select name="parentCategory" class="parentCategory">
             <option value="" selected="selected" disabled>選択</option>
@@ -54,7 +62,6 @@
             @endforeach
           </select>
         </div>
-        <p class='err'>{{$errors->first('childCategory')}}</p>
       </div>
       <div class="errCreateQuestBox">
         <p class="err"></p>

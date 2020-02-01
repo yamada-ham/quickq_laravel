@@ -4,7 +4,7 @@
         <img src="{{asset("images/icon/btnOpen.png")}}">
       </div>
       <div class="inTitleBox">
-        <h1><a href="">
+        <h1><a href='{{asset('/')}}'>
           {{Config('const.QUICKQ.name')}}
         </a></h1>
       </div>

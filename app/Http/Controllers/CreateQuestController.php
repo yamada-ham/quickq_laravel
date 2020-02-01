@@ -16,7 +16,6 @@ class CreateQuestController extends Controller
     }
 
     public function post(CreateQuestRequest $request){
-      $msg = '成功';
-      return view('pages.createQuest',['msg'=>$msg]);
+      return view('pages.createQuest');
     }
 }

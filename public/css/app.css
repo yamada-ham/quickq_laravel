@@ -35,6 +35,10 @@ span {
   /* overflow: hidden; */
 }
 
+input:focus {
+  outline: none;
+}
+
 input[type=button] {
   overflow: visible;
   text-transform: none;
@@ -1201,7 +1205,7 @@ div.createQuestBox div.inCreateQuestBox div.errCreateQuestBox {
 div.createQuestBox div.inCreateQuestBox div.errCreateQuestBox p.err {
   color: #ff002e;
   font-weight: bold;
-  text-align: center;
+  margin-left: 8px;
 }
 
 div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox {

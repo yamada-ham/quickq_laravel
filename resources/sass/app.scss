@@ -40,6 +40,10 @@ p,a,span{
   /* overflow: hidden; */
 }
 
+input:focus {
+    outline: none;
+}
+
 input[type="button"]{
   overflow: visible;
   text-transform: none;
