@@ -1,5 +1,6 @@
 @extends('layouts.main')
 @section('content')
+
 <div class="createQuestBox">
   <div class="inCreateQuestBox">
     <form action="" method='POST' id="signup" name="signup">
@@ -24,8 +25,15 @@
         </div>
         @endif
 
+        @if($errors->has('choice'))
+        <div class="errCreateQuestBox">
+          <p class='err'>{{$errors->first('choice')}}</p>
+        </div>
+        @endif
+
         <ul id="choicesList">
-            <li ><input type="text" name="choice[]" value="{{old('choice.0')}}" placeholder="未入力"></li>
+          <li ><input type="text" name="choice[]" value="{{old('choice.0')}}" placeholder="未入力"></li>
+          <li ><input type="text" name="choice[]" value="{{old('choice.1')}}" placeholder="未入力"></li>
         </ul>
 
 

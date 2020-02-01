@@ -28,8 +28,9 @@ class CreateQuestRequest extends FormRequest
     public function rules()
     {
         return [
-            'questTitle' => 'required|max:200|choicesmin2',
+            'questTitle' => 'required|max:200',
             'choice.*' => 'required',
+            'choice' => 'choicesmin2',
             'parentCategory' => 'required',
             'childCategory' => 'required',
         ];
@@ -37,9 +38,10 @@ class CreateQuestRequest extends FormRequest
 
     public function messages(){
       return [
-        'questTitle.choicesmin2' => 'intじゃない',
+        'questTitle.required' => '空欄は無効です。',
         'questTitle.max' => '可能入力文字数を超えています。',
         'choice.*.required' => '空欄は無効です。',
+        'choice.choicesmin2' => '選択欄は二つ以上作成してください',
         'parentCategory.required' => 'カテゴリーを選択してください',
         'childCategory.required' => 'カテゴリーを選択してください',
       ];
