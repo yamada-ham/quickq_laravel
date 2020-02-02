@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -75,6 +77,7 @@ div.createBox {
   position: fixed;
   bottom: 10px;
   right: 12px;
+  z-index: 99;
 }
 
 div.createBox p a {
@@ -96,6 +99,13 @@ div.createBox p a {
     height: 70px;
     line-height: 62px;
   }
+}
+
+#app {
+  min-height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  padding-bottom: 40px;
 }
 
 @-webkit-keyframes click-wave {
@@ -329,7 +339,12 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li form input[type=submit] {
 }
 
 footer {
+  width: 100%;
   background: #717171;
+  position: absolute;
+  /*←絶対位置*/
+  bottom: 0;
+  box-sizing: border-box;
 }
 
 footer div.inFooterBox {

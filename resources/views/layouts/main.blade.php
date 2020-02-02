@@ -10,10 +10,11 @@
 <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 </head>
 <body>
+<div id='app'>
 @include('subviews.sub_header')
 @yield('content')
 @include('subviews.sub_footer')
-
+</div>
 <script src="{{asset('./js/app.js')}}"></script>
 </body>
 </html>

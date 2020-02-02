@@ -1,7 +1,11 @@
 footer{
+  width:100%;
   background: #717171;
+  position: absolute;/*←絶対位置*/
+  bottom: 0;
+  box-sizing: border-box;
   div.inFooterBox{
-    padding:6px 8px;
+      padding:6px 8px;
     p{
       text-align: center;
     }

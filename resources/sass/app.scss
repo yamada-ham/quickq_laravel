@@ -101,6 +101,7 @@ div.createBox{
   position:fixed;
   bottom:10px;
   right:12px;
+  z-index:99;
   p{
     a{
       display:inline-block;
@@ -129,6 +130,13 @@ div.createBox{
 //         margin-right: auto;
 //     }
 // }
+
+#app{
+  min-height: 100vh;
+  position: relative;
+   box-sizing: border-box;
+   padding-bottom: 40px;
+}
 @import 'parts/_keyframes';
 @import 'parts/_partHeader';
 @import 'parts/_partFooter';
