@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\CreateQuestRequest;
+use Carbon\Carbon;
 class CreateQuestController extends Controller
 {
     public function __construct(){
@@ -29,15 +31,19 @@ class CreateQuestController extends Controller
             $choiceText .= ',';
           }
       }
-      echo $choiceCount;
-      echo $choiceText;
-      echo $request->childCategory;
 
       $param =[
         'questTitle' => $request->questTitle,
-        'choice' => $request->choice,
+        'choicesNum' => count($request->choice),
+        'choicesList' => $choiceText,
         'category' => $request->childCategory,
+        'code' => uniqid(mt_rand(),true),
+        'userId' => Auth::user()->id,
+        'created' => Carbon::now(),
+        'modified' => Carbon::now()
       ];
+
+      DB::table('quests')->insert($param);
 
       return view('pages.createQuest');
     }
