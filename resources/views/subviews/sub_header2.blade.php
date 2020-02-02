@@ -4,7 +4,7 @@
         <img src="{{asset("images/icon/btnOpen.png")}}">
       </div>
       <div class="inTitleBox">
-        <h1><a href="{{asset('')}}">
+        <h1><a href="{{action('IndexController@get')}}">
           {{Config('const.QUICKQ.name')}}
         </a></h1>
       </div>
@@ -23,7 +23,7 @@
     @if(Auth::check())
       <h2 class="greet">Hello.{{ Auth::user()->name }}さん</h2>
       <ul>
-      <li><a href="userAccount.php">アカウント管理</a></li>
+      <li><a href="{{action('UserAccountController@get')}}">アカウント管理</a></li>
       <li><a href="createQuest.php">アンケートを作成する</a></li>
       </ul>
     @else

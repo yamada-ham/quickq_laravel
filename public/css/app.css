@@ -1351,6 +1351,7 @@ div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li a {
   position: relative;
   display: block;
   padding: 8px 10px;
+  color: black;
 }
 
 div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li a img {

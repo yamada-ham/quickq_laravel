@@ -22,8 +22,7 @@ class CreateQuestsTable extends Migration
           $table->string('category',100);
           $table->string('userId',100);
           $table->integer('numberOfResponses')->default(0);
-          $table->dateTime('created');
-          $table->dateTime('modified');
+          $table->timestamps();
         });
     }
 

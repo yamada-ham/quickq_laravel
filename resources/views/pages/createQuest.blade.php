@@ -3,7 +3,7 @@
 
 <div class="createQuestBox">
   <div class="inCreateQuestBox">
-    <form action="" method='POST' id="signup" name="signup">
+    <form action="{{action('CreateQuestController@post')}}" method='post' id="signup" name="signup">
       @csrf
       <div class="questTitleBox">
         <p>1.アンケートの内容を記述してください。</p>

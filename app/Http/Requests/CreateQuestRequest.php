@@ -13,7 +13,7 @@ class CreateQuestRequest extends FormRequest
      */
     public function authorize()
     {
-      if($this->path() == 'createQuest'){
+      if($this->path() == 'create_quest'){
         return true;
       }else{
         return false;

@@ -25,6 +25,7 @@ class CreateQuestController extends Controller
         if($choice === ''){
           continue;
         }
+          $choice = str_replace(',','&#44',$choice);
           $choiceCount++;
           $choiceText .= $choice;
           if($choiceCount < count($request->choice)){
@@ -39,8 +40,8 @@ class CreateQuestController extends Controller
         'category' => $request->childCategory,
         'code' => uniqid(mt_rand(),true),
         'userId' => Auth::user()->id,
-        'created' => Carbon::now(),
-        'modified' => Carbon::now()
+        'created_at' => new \DateTime(),
+        'updated_at' => new \DateTime(),
       ];
 
       DB::table('quests')->insert($param);
