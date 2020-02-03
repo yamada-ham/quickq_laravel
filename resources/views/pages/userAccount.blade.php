@@ -4,7 +4,7 @@
   <div class="inAccountInfoBox">
     <div class="accountServiceListBox">
       <ul>
-        <li><a href="./userAccountInfoChange.php">アカウント情報の変更<img src="{{asset('images/icon/ya.png')}}"></a></li>
+        <li><a href="{{action('UserAccountInfoConfirmController@get')}}">アカウント情報の変更<img src="{{asset('images/icon/ya.png')}}"></a></li>
         <li><a href="{{action('UserQuestsController@get')}}">作成したアンケート<img src="{{asset('images/icon/ya.png')}}"></i></a></li>
       </ul>
   </div>
