@@ -36,7 +36,7 @@
           <h1>{{$key}}</h1>
           <ul>
             @foreach($arr as $category)
-              <li><a href="">{{$category}}</a></li>
+              <li><a href="{{action('CategoryController@get',["category"=>$category])}}">{{$category}}</a></li>
             @endforeach
           </ul>
           </section>

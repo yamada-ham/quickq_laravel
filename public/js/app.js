@@ -12616,213 +12616,236 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Quickq =
+/*#__PURE__*/
+function () {
+  function Quickq() {
+    _classCallCheck(this, Quickq);
+
+    this.drwer();
+    this.choiceInputBtn();
+    this.slide();
+    this.greetInDrwer();
+    this.questsLimitLength();
+    this.createCategory();
+    this.getTextareaLength();
+  }
+
+  _createClass(Quickq, [{
+    key: "drwer",
+    value: function drwer() {
+      if ($("#menuBtn") != null) {
+        var menu = $('.drwerMenuBox');
+        var btn = $('#menubtn');
+        $('.overlay').prepend('<div class="btnCloseBox"><img src="./images/icon/btnClose.png"></div>');
+        btn.on('click', function () {
+          btn.addClass('drawer');
+
+          if ($(this).hasClass('drawer')) {
+            menu.stop().animate({
+              left: '0px'
+            });
+            $('.overlay').css({
+              display: 'block'
+            });
+          }
+        });
+        $('.btnCloseBox img').on('click', function () {
+          menu.stop().animate({
+            left: '-250px'
+          });
+          $('.overlay').css({
+            display: 'none'
+          });
+        });
+        $('.overlay').on('click', function () {
+          menu.stop().animate({
+            left: '-250px'
+          });
+          $(this).css({
+            display: 'none'
+          });
+        });
+      }
+    }
+  }, {
+    key: "choiceInputBtn",
+    value: function choiceInputBtn() {
+      if ($("#addChoiceInput")[0] != null) {
+        var $choicesList = document.getElementById('choicesList');
+        var $hiddenChoice = document.getElementById('hiddenChoice');
+        document.getElementById('addChoiceInput').addEventListener('click', function (e) {
+          if ($choicesList.children.length > 7) {
+            return;
+          }
+
+          var $li = document.createElement('li');
+          var $clone = $hiddenChoice.cloneNode(true);
+          $clone.setAttribute('type', 'text');
+          $li.appendChild($clone);
+          $choicesList.appendChild($li);
+          $choicesList.lastElementChild.querySelector("input").focus();
+        }, false);
+        document.getElementById('removeChoiceInput').addEventListener('click', function (e) {
+          if ($choicesList.children.length < 3) {
+            return;
+          }
+
+          var $lastChoice = $choicesList.lastElementChild;
+          $choicesList.removeChild($lastChoice);
+          $choicesList.lastElementChild.querySelector("input").focus();
+        });
+      }
+    }
+  }, {
+    key: "slide",
+    value: function slide() {
+      if ($(".accordion_ul").length > 0) {
+        $(window).on("resize", function () {
+          if (window.innerWidth >= 990) {
+            location.reload();
+            return;
+          }
+        });
+
+        if (window.innerWidth >= 991) {
+          $('.accordion_ul ul').show();
+          return;
+        }
+
+        $('.accordion_ul ul').hide();
+        $('.accordion_ul h1').click(function (e) {
+          if ($(this).hasClass('rotate225')) {
+            $(this).removeClass('rotate225');
+          } else {
+            $(this).addClass('rotate225');
+          }
+
+          $(this).next("ul").slideToggle();
+        });
+      }
+    }
+  }, {
+    key: "createCategory",
+    value: function createCategory() {
+      if ($(".childInCreateCategoryBox") != null) {
+        var $createCategoryBox = $('.childInCreateCategoryBox');
+        var $childCategory = $('.childCategory');
+        var original = $childCategory.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
+        //htmlが再読み込みされたときに状態を保持しておく
+
+        if ($('.parentCategory').val() == "") {
+          $childCategory.prop('disabled', true);
+        } else {
+          $childCategory.prop('disabled', false);
+        }
+
+        $('.parentCategory').on('change load', function () {
+          //選択された親のvalueを取得し変数に入れる
+          var val1 = $(this).val(); //削除された要素をもとに戻すため.html(original)を入れておく
+
+          $childCategory.html(original).find('option').each(function () {
+            var val2 = $(this).data('val'); //data-valの値を取得
+            //valueと異なるdata-valを持つ要素を削除
+
+            if (val1 != val2) {
+              $(this).not(':first-child').remove();
+            }
+          }); //親側のselect要素が未選択の場合、都道府県をdisabledにする
+
+          if ($(this).val() == "") {
+            $createCategoryBox.addClass('hidden');
+            $childCategory.prop('disabled', true);
+          } else {
+            $createCategoryBox.removeClass('hidden');
+            $childCategory.prop('disabled', false);
+          }
+        });
+      }
+    }
+  }, {
+    key: "greetInDrwer",
+    value: function greetInDrwer() {
+      if ($(".greet").length > 0) {
+        var greets = document.querySelectorAll('.greet');
+        greets.forEach(function (greet) {
+          var greetText = greet.textContent;
+
+          if (greetText.length > 14) {
+            greet.textContent = greetText.slice(0, 14) + '...';
+          }
+        });
+      }
+    }
+  }, {
+    key: "questsLimitLength",
+    value: function questsLimitLength() {
+      if ($("ul.questLimitBox").length > 0) {
+        var quests = document.querySelectorAll('ul.questLimitBox li.newListBox div.inNewListBox ul li a');
+
+        if (window.innerWidth >= 1199) {
+          quests.forEach(function (quest) {
+            var questText = quest.textContent;
+
+            if (questText.length > 33) {
+              quest.textContent = questText.slice(0, 33) + '...';
+            }
+          });
+        } else if (window.innerWidth >= 991) {
+          quests.forEach(function (quest) {
+            var questText = quest.textContent;
+
+            if (questText.length > 27) {
+              quest.textContent = questText.slice(0, 27) + '...';
+            }
+          });
+        } else if (window.innerWidth >= 767) {
+          quests.forEach(function (quest) {
+            var questText = quest.textContent;
+
+            if (questText.length > 20) {
+              quest.textContent = questText.slice(0, 20) + '...';
+            }
+          });
+        } else {
+          quests.forEach(function (quest) {
+            var questText = quest.textContent;
+
+            if (questText.length > 30) {
+              quest.textContent = questText.slice(0, 30) + '...';
+            }
+          });
+        }
+      }
+    }
+  }, {
+    key: "getTextareaLength",
+    value: function getTextareaLength() {
+      if ($("div.questTitleBox > textarea.questTitle").length) {
+        if ($(".childInCreateCategoryBox") != null) {
+          $("textarea.questTitle").on("keyup", function (e) {
+            var textLength = $("textarea.questTitle").val().length;
+            $(".questTitleTtextLength").text("".concat(textLength, "/200"));
+          });
+        }
+      }
+    }
+  }]);
+
+  return Quickq;
+}();
+
 $(function () {
   'use strict';
 
-  if ($("#menuBtn") != null) {
-    drwer();
-  }
-
-  if ($("#addChoiceInput")[0] != null) {
-    choiceInputBtn();
-  }
-
-  if ($(".accordion_ul").length > 0) {
-    slide();
-  }
-
-  if ($(".greet").length > 0) {
-    greetInDrwer();
-  }
-
-  if ($("ul.questLimitBox").length > 0) {
-    questsLimitLength();
-  }
-
-  if ($(".childInCreateCategoryBox") != null) {
-    createCategory();
-  }
-
-  if ($("div.questTitleBox > textarea.questTitle").length) {
-    getTextareaLength();
-  }
+  var quickq = new Quickq();
 });
-
-function createCategory() {
-  var $createCategoryBox = $('.childInCreateCategoryBox');
-  var $childCategory = $('.childCategory');
-  var original = $childCategory.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
-  //htmlが再読み込みされたときに状態を保持しておく
-
-  if ($('.parentCategory').val() == "") {
-    $childCategory.prop('disabled', true);
-  } else {
-    $childCategory.prop('disabled', false);
-  }
-
-  $('.parentCategory').on('change load', function () {
-    //選択された親のvalueを取得し変数に入れる
-    var val1 = $(this).val(); //削除された要素をもとに戻すため.html(original)を入れておく
-
-    $childCategory.html(original).find('option').each(function () {
-      var val2 = $(this).data('val'); //data-valの値を取得
-      //valueと異なるdata-valを持つ要素を削除
-
-      if (val1 != val2) {
-        $(this).not(':first-child').remove();
-      }
-    }); //親側のselect要素が未選択の場合、都道府県をdisabledにする
-
-    if ($(this).val() == "") {
-      $createCategoryBox.addClass('hidden');
-      $childCategory.prop('disabled', true);
-    } else {
-      $createCategoryBox.removeClass('hidden');
-      $childCategory.prop('disabled', false);
-    }
-  });
-}
-
-function greetInDrwer() {
-  var greets = document.querySelectorAll('.greet');
-  greets.forEach(function (greet) {
-    var greetText = greet.textContent;
-
-    if (greetText.length > 14) {
-      greet.textContent = greetText.slice(0, 14) + '...';
-    }
-  });
-}
-
-function questsLimitLength() {
-  var quests = document.querySelectorAll('ul.questLimitBox li.newListBox div.inNewListBox ul li a');
-
-  if (window.innerWidth >= 1199) {
-    quests.forEach(function (quest) {
-      var questText = quest.textContent;
-
-      if (questText.length > 33) {
-        quest.textContent = questText.slice(0, 33) + '...';
-      }
-    });
-  } else if (window.innerWidth >= 991) {
-    quests.forEach(function (quest) {
-      var questText = quest.textContent;
-
-      if (questText.length > 27) {
-        quest.textContent = questText.slice(0, 27) + '...';
-      }
-    });
-  } else if (window.innerWidth >= 767) {
-    quests.forEach(function (quest) {
-      var questText = quest.textContent;
-
-      if (questText.length > 20) {
-        quest.textContent = questText.slice(0, 20) + '...';
-      }
-    });
-  } else {
-    quests.forEach(function (quest) {
-      var questText = quest.textContent;
-
-      if (questText.length > 30) {
-        quest.textContent = questText.slice(0, 30) + '...';
-      }
-    });
-  }
-}
-
-function slide() {
-  $(window).on("resize", function () {
-    if (window.innerWidth >= 990) {
-      location.reload();
-      return;
-    }
-  });
-
-  if (window.innerWidth >= 991) {
-    $('.accordion_ul ul').show();
-    return;
-  }
-
-  $('.accordion_ul ul').hide();
-  $('.accordion_ul h1').click(function (e) {
-    if ($(this).hasClass('rotate225')) {
-      $(this).removeClass('rotate225');
-    } else {
-      $(this).addClass('rotate225');
-    }
-
-    $(this).next("ul").slideToggle();
-  });
-}
-
-function getTextareaLength() {
-  $("textarea.questTitle").on("keyup", function (e) {
-    var textLength = $("textarea.questTitle").val().length;
-    $(".questTitleTtextLength").text("".concat(textLength, "/200"));
-  });
-}
-
-function choiceInputBtn() {
-  var $choicesList = document.getElementById('choicesList');
-  var $hiddenChoice = document.getElementById('hiddenChoice');
-  document.getElementById('addChoiceInput').addEventListener('click', function (e) {
-    if ($choicesList.children.length > 7) {
-      return;
-    }
-
-    var $li = document.createElement('li');
-    var $clone = $hiddenChoice.cloneNode(true);
-    $clone.setAttribute('type', 'text');
-    $li.appendChild($clone);
-    $choicesList.appendChild($li);
-    $choicesList.lastElementChild.querySelector("input").focus();
-  }, false);
-  document.getElementById('removeChoiceInput').addEventListener('click', function (e) {
-    if ($choicesList.children.length < 3) {
-      return;
-    }
-
-    var $lastChoice = $choicesList.lastElementChild;
-    $choicesList.removeChild($lastChoice);
-    $choicesList.lastElementChild.querySelector("input").focus();
-  });
-}
-
-function drwer() {
-  var menu = $('.drwerMenuBox');
-  var btn = $('#menubtn');
-  $('.overlay').prepend('<div class="btnCloseBox"><img src="./images/icon/btnClose.png"></div>');
-  btn.on('click', function () {
-    btn.addClass('drawer');
-
-    if ($(this).hasClass('drawer')) {
-      menu.stop().animate({
-        left: '0px'
-      });
-      $('.overlay').css({
-        display: 'block'
-      });
-    }
-  });
-  $('.btnCloseBox img').on('click', function () {
-    menu.stop().animate({
-      left: '-250px'
-    });
-    $('.overlay').css({
-      display: 'none'
-    });
-  });
-  $('.overlay').on('click', function () {
-    menu.stop().animate({
-      left: '-250px'
-    });
-    $(this).css({
-      display: 'none'
-    });
-  });
-}
 
 /***/ }),
 
