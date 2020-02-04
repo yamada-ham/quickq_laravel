@@ -22,6 +22,7 @@ class UserAccountInfoChangeController extends Controller
         'updated_at' => new \DateTime(),
       ];
       DB::table('users')->where('id',$request -> id)->update($param);
-      return view('pages.userAccountInfoConfirm',['msg'=>'お客様のアカウント情報を変更しました。']);
+      return redirect()->action('UserAccountInfoConfirmController@get');
+      // return view('pages.userAccountInfoConfirm',['msg'=>'お客様のアカウント情報を変更しました。','name' => $request -> userName,'email' => $request -> email,]);
     }
 }
