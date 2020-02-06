@@ -15,4 +15,7 @@ Route::get('/user_account_info_confirm','UserAccountInfoConfirmController@get');
 Route::get('/user_account_info_change','UserAccountInfoChangeController@get');
 Route::post('/user_account_info_change','UserAccountInfoChangeController@post');
 
+Route::get('/answer_quest','AnswerQuestController@get');
+
+
 Auth::routes();
