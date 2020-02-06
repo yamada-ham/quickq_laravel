@@ -1,5 +1,6 @@
 class Quickq{
   constructor(){
+    this.disablReturn();
     this.drwer();
     this.choiceInputBtn();
     this.slide();
@@ -7,7 +8,13 @@ class Quickq{
     this.questsLimitLength();
     this.createCategory();
     this.getTextareaLength();
-
+  }
+  disablReturn(){
+    if($('input[type=submit]').length > 0){
+      if( window.event.keyCode == 13 ){
+          return false;
+       }
+    }
   }
   drwer(){
     if($("#menuBtn") != null){
@@ -96,12 +103,11 @@ class Quickq{
 
   //htmlが再読み込みされたときに状態を保持しておく
     if ($('.parentCategory').val() == "") {
-      $childCategory.prop('disabled', true);
+      $childCategory.prop('disabled', false);
     } else {
-      $childCategory.prop('disabled',false);
+      $childCategory.prop('disabled',true);
     }
-    $('.parentCategory').on('change load',function() {
-
+    $('.parentCategory').change(function() {
       //選択された親のvalueを取得し変数に入れる
       var val1 = $(this).val();
 
@@ -186,4 +192,5 @@ class Quickq{
 $(function(){
   'use strict';
   let quickq = new Quickq();
+
 });

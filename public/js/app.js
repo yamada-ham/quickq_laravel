@@ -12628,6 +12628,7 @@ function () {
   function Quickq() {
     _classCallCheck(this, Quickq);
 
+    this.disablReturn();
     this.drwer();
     this.choiceInputBtn();
     this.slide();
@@ -12638,6 +12639,15 @@ function () {
   }
 
   _createClass(Quickq, [{
+    key: "disablReturn",
+    value: function disablReturn() {
+      if ($('input[type=submit]').length > 0) {
+        if (window.event.keyCode == 13) {
+          return false;
+        }
+      }
+    }
+  }, {
     key: "drwer",
     value: function drwer() {
       if ($("#menuBtn") != null) {
@@ -12741,12 +12751,12 @@ function () {
         //htmlが再読み込みされたときに状態を保持しておく
 
         if ($('.parentCategory').val() == "") {
-          $childCategory.prop('disabled', true);
-        } else {
           $childCategory.prop('disabled', false);
+        } else {
+          $childCategory.prop('disabled', true);
         }
 
-        $('.parentCategory').on('change load', function () {
+        $('.parentCategory').change(function () {
           //選択された親のvalueを取得し変数に入れる
           var val1 = $(this).val(); //削除された要素をもとに戻すため.html(original)を入れておく
 

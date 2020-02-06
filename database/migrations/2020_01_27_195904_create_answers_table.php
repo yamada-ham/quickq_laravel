@@ -22,7 +22,7 @@ class CreateAnswersTable extends Migration
           $table->string('choice',255);
           $table->string('remote_addr',255);
           $table->string('user_agent',255);
-          $table->unique(['remote_addr','user_agent'],'unique_answer');
+          $table->unique(['remote_addr','user_agent','code'],'unique_answer');
           $table->datetime('created');
           $table->dateTime('modified');
         });
