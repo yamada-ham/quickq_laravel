@@ -10,7 +10,7 @@
       </div>
       <div class="loginInfoBox">
         @if(Auth::check())
-        <p><a><span class="greet">{{Auth::user()->name}}</span><span class="account">Myアカウント</span></a></p>
+        <p><a href={{action('UserAccountController@get')}}><span class="greet">{{Auth::user()->name}}</span><span class="account">Myアカウント</span></a></p>
         @else
           <p><a href="{{route('login')}}">ログイン</a></p>
         @endif
