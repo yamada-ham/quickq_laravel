@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UserAccountInfoChangeRequest;
 use Illuminate\Support\Facades\DB;
 
 class UserAccountInfoChangeController extends Controller
@@ -15,9 +16,9 @@ class UserAccountInfoChangeController extends Controller
       return view('pages.userAccountInfoChange');
     }
 
-    public function post(Request $request){
+    public function post(UserAccountInfoChangeRequest $request){
       $param = [
-        'name' => $request -> userName,
+        'name' => $request -> name,
         'email' => $request -> email,
         'updated_at' => new \DateTime(),
       ];

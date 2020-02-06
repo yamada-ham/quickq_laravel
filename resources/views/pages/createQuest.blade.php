@@ -11,7 +11,7 @@
         @if($errors->has('questTitle'))
         <div class="errCreateQuestBox">
         <p class='err'>{{$errors->first('questTitle')}}</p></div>
-      @endif
+        @endif
         <textarea name="questTitle" class="questTitle" placeholder="例1:カレーにカボチャを入れる？&#13;&#10;例2:好きな種類の音楽は？" maxlength="200">{{old('questTitle')}}</textarea>
 <span class="questTitleTtextLength">0/200</span>
 

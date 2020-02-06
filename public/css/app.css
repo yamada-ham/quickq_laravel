@@ -1476,6 +1476,12 @@ div.changeFormBox div.inChangeFormBox form div.inputBox {
   margin-bottom: 20px;
 }
 
+div.changeFormBox div.inChangeFormBox form div.inputBox div.errAccountInfoChangeBox p {
+  color: #ff002e;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
 div.changeFormBox div.inChangeFormBox form div.inputBox label {
   display: block;
   margin-bottom: 4px;
@@ -1497,19 +1503,19 @@ div.changeFormBox div.inChangeFormBox form div.inputBox input[type=text]:focus {
   box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
 }
 
-div.changeFormBox div.inChangeFormBox form p {
+div.changeFormBox div.inChangeFormBox form p.submitBox {
   width: 100%;
 }
 
 @media only screen and (min-width: 991px) {
-  div.changeFormBox div.inChangeFormBox form p {
+  div.changeFormBox div.inChangeFormBox form p.submitBox {
     width: 40%;
     margin-left: auto;
     margin-right: auto;
   }
 }
 
-div.changeFormBox div.inChangeFormBox form p input[type=submit] {
+div.changeFormBox div.inChangeFormBox form p.submitBox input[type=submit] {
   display: inline-block;
   border-radius: 5%;
   font-size: 1rem;
@@ -1526,12 +1532,24 @@ div.changeFormBox div.inChangeFormBox form p input[type=submit] {
   width: 100%;
 }
 
-div.changeFormBox div.inChangeFormBox form p input[type=submit]:hover {
+div.changeFormBox div.inChangeFormBox form p.submitBox input[type=submit]:hover {
   opacity: 1;
 }
 
 div.changeFormBox div.inChangeFormBox div.cancel {
   text-align: center;
+}
+
+div.changeFormBox div.inChangeFormBox div.userAccountInfoConfirmLink {
+  text-align: center;
+}
+
+div.changeFormBox div.inChangeFormBox div.userAccountInfoConfirmLink a {
+  color: #0e00aa;
+}
+
+div.changeFormBox div.inChangeFormBox div.userAccountInfoConfirmLink a:hover {
+  color: #756be4;
 }
 
 div.accountConfirmBox {

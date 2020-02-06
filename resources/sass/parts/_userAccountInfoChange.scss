@@ -13,6 +13,13 @@ div.changeFormBox{
     }
     form{
       div.inputBox{
+        div.errAccountInfoChangeBox{
+          p{
+            color:#ff002e;
+            font-weight: bold;
+            margin-left:4px;
+          }
+        }
         margin-bottom:20px;
         label{
           display:block;
@@ -33,7 +40,7 @@ div.changeFormBox{
           }
         }
       }
-      p{
+      p.submitBox{
         width:100%;
         @include media(l){
           width:40%;
@@ -63,7 +70,15 @@ div.changeFormBox{
     div.cancel{
       text-align: center;
       a{
-
+      }
+    }
+    div.userAccountInfoConfirmLink{
+      text-align: center;
+      a{
+        color:$linkColor;
+        &:hover{
+          color:$linkHoverColor;
+        }
       }
     }
   }
