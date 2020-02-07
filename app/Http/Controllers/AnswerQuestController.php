@@ -28,33 +28,33 @@ class AnswerQuestController extends Controller
              $votes[] = $count;
           }
 
-          foreach($choicesList as $choice){
-            $count = DB::table('answers')->whereRaw('code = ? and choice = ? and sex = ?',[$request->code,$choice,'男'])->count();
-            $manVotes[] = $count;
-          }
+          // foreach($choicesList as $choice){
+          //   $count = DB::table('answers')->whereRaw('code = ? and choice = ? and sex = ?',[$request->code,$choice,'男'])->count();
+          //   $manVotes[] = $count;
+          // }
+          //
+          // foreach($choicesList as $choice){
+          //   $count = DB::table('answers')->whereRaw('code = ? and choice = ? and sex = ?',[$request->code,$choice,'女'])->count();
+          //   $womanVotes[] = $count;
+          // }
 
-          foreach($choicesList as $choice){
-            $count = DB::table('answers')->whereRaw('code = ? and choice = ? and sex = ?',[$request->code,$choice,'女'])->count();
-            $womanVotes[] = $count;
-          }
-
-          $ages = [00,10,20,30,40,50,60,70];
-
-          foreach($choicesList as $choice){
-            foreach($ages as $age){
-              $count = DB::table('answers')->whereRaw('code = ? and choice = ? and age = ?',[$request->code,$choice,$age])->count();
-              $array[] = $count;
-            }
-            $ageVotes[] = $array;
-            $array = [];
-          }
+          // $ages = [00,10,20,30,40,50,60,70];
+          //
+          // foreach($choicesList as $choice){
+          //   foreach($ages as $age){
+          //     $count = DB::table('answers')->whereRaw('code = ? and choice = ? and age = ?',[$request->code,$choice,$age])->count();
+          //     $array[] = $count;
+          //   }
+          //   $ageVotes[] = $array;
+          //   $array = [];
+          // }
 
           $votesData = [
             ($choicesList),
             ($votes),
-            ($manVotes),
-            ($womanVotes),
-            ($ageVotes),
+            // ($manVotes),
+            // ($womanVotes),
+            // ($ageVotes),
           ];
           // $votesData = json_encode($votesData);
 

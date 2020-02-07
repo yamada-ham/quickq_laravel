@@ -9,7 +9,7 @@
         <div class="questTitle"><p><span>アンケート内容：</span>@if(isset($quest->questTitle)) {{$quest->questTitle}} @endif</p></div>
           <div class="inChartBox">
             <h3>総合結果</h3>
-            <canvas id="myChartPie" style="position: relative; height:60vh; width:100vw;"></canvas>
+            <canvas id="myChartPie" style="position: relative; height:54vh; width:100vw;"></canvas>
           </div>
         </div>
         <div class="linkTopCase"><p><a href="{{action('IndexController@get')}}">トップへ</a></p></div>
@@ -32,8 +32,8 @@
                   labels: {
                     position:'outside',
                     showActualPercentages: true,
-                    outsidePadding: 10,
-                    textMargin: 2
+                    outsidePadding: 8,
+                    textMargin: 2,
                 }
               }
             }
