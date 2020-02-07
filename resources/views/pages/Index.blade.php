@@ -21,7 +21,7 @@
       <div><h2>人気アンケート</h2></div>
       <ul>
         @foreach($popularLimit5 as $quest)
-          <li><a>{{$quest->questTitle}}</a></li>
+          <li><a href="{{action('AnswerQuestController@get',['code'=>$quest->code])}}">{{$quest->questTitle}}</a></li>
         @endforeach
       </ul>
     </div>
