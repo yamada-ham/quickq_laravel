@@ -32,7 +32,7 @@
                   labels: {
                     position:'outside',
                     showActualPercentages: true,
-                    outsidePadding: 4,
+                    outsidePadding: 10,
                     textMargin: 2
                 }
               }
@@ -68,7 +68,7 @@
           <ul class="inAnswerRadioBox">
             @if(isset($choicesList))
             @for($i = 0; $i < ($quest->choicesNum);$i++)
-            <li><input type="radio" name="choice" class="answerRadio" id="answerRadio{{$i}}" value="{{$choicesList[$i]}}"><label for="answerRadio" >{{$choicesList[$i]}}</label></li>
+            <li><input type="radio" name="choice" class="answerRadio" id="answerRadio{{$i}}" value="{{$choicesList[$i]}}"><label for="answerRadio{{$i}}" >{{$choicesList[$i]}}</label></li>
             @endfor
           @endif
           </ul>
