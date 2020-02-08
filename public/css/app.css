@@ -1392,6 +1392,23 @@ div.theCategoryBox {
   margin-left: auto;
 }
 
+@media only screen and (min-width: 991px) {
+  div.theCategoryBox {
+    width: 70%;
+  }
+}
+
+div.theCategoryBox div.inTheCategoryBox p {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+div.theCategoryBox div.inTheCategoryBox h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
 div.theCategoryBox div.inTheCategoryBox ul {
   padding: 0;
   position: relative;
@@ -1399,6 +1416,8 @@ div.theCategoryBox div.inTheCategoryBox ul {
 
 div.theCategoryBox div.inTheCategoryBox ul li {
   border-bottom: 1px solid #d9d9d9;
+  margin-bottom: 14px;
+  padding-bottom: 4px;
 }
 
 div.theCategoryBox div.inTheCategoryBox ul li a {
@@ -1425,18 +1444,22 @@ div.theCategoryBox div.inTheCategoryBox ul li div.categoryQuestData span {
 }
 
 div.paginationBox {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.paginationBox div.inPaginationBox ul.pagination {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
           justify-content: center;
   -webkit-box-align: center;
           align-items: center;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-div.paginationBox div.inPaginationBox ul.pagination li a {
+div.paginationBox div.inPaginationBox ul.pagination li a,
+div.paginationBox div.inPaginationBox ul.pagination li span {
   color: #000000;
   float: left;
   margin-right: 2px;
@@ -1448,17 +1471,20 @@ div.paginationBox div.inPaginationBox ul.pagination li a {
   box-sizing: border-box;
 }
 
-div.paginationBox div.inPaginationBox ul.pagination li a.active {
+div.paginationBox div.inPaginationBox ul.pagination li a.active,
+div.paginationBox div.inPaginationBox ul.pagination li span.active {
   background-color: #4CAF50;
   color: white;
   border: 1px solid #4CAF50;
 }
 
-div.paginationBox div.inPaginationBox ul.pagination li a:hover:not(.active) {
+div.paginationBox div.inPaginationBox ul.pagination li a:hover:not(.active),
+div.paginationBox div.inPaginationBox ul.pagination li span:hover:not(.active) {
   background-color: #ddd;
 }
 
-div.paginationBox div.inPaginationBox ul.pagination li a.pageEnd {
+div.paginationBox div.inPaginationBox ul.pagination li a.pageEnd,
+div.paginationBox div.inPaginationBox ul.pagination li span.pageEnd {
   padding: 8px 12px;
 }
 

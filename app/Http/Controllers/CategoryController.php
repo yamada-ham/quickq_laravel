@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class CategoryController extends Controller
 {
     public function get(Request $request){
-      DB::table('quests')->where('category',$request->category)->orderBy('id','desc')->get();
-      return view('pages.category');
+      $quests = DB::table('quests')->where('category',$request->category)->orderBy('id','desc')->paginate(10);
+      return view('pages.category',['quests'=>$quests,'category'=>$request->category]);
     }
 }

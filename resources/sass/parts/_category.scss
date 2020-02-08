@@ -2,18 +2,26 @@ div.theCategoryBox{
   width:90%;
   margin-right: auto;
   margin-left:auto;
+  @include media(l){
+    width:70%;
+  }
   div.inTheCategoryBox{
     p{
-
+      margin-top:20px;
+      text-align: center;
+      font-weight: bold;
     }
     h2{
-
+      margin-top:20px;
+      margin-bottom:10px;
     }
     ul{
       padding:0;
       position:relative;
       li{
         border-bottom:1px solid #d9d9d9;
+        margin-bottom:14px;
+        padding-bottom:4px;
         a{
           display:block;
           font-size:1.1rem;
@@ -42,16 +50,16 @@ div.theCategoryBox{
 }
 
 div.paginationBox{
-  display: flex;
-  justify-content:center;
-  align-items: center;
   width:90%;
   margin-left:auto;
   margin-right:auto;
   div.inPaginationBox{
     ul.pagination{
+      display: flex;
+      justify-content:center;
+      align-items: center;
       li{
-        a{
+        a,span{
           color: #000000;
           float: left;
           margin-right:2px;
