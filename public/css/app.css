@@ -1702,6 +1702,15 @@ div.questAnalysisBox {
   }
 }
 
+div.questAnalysisBox div.inQuestAnalysisBox div.errQuestAnalysisBox {
+  margin-top: 20px;
+}
+
+div.questAnalysisBox div.inQuestAnalysisBox div.errQuestAnalysisBox p.err {
+  text-align: center;
+  font-weight: bold;
+}
+
 div.questAnalysisBox div.inQuestAnalysisBox div.questTitle {
   background: #f0f4e6;
   padding: 6px 8px;

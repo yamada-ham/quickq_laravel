@@ -6,6 +6,13 @@ div.questAnalysisBox{
     width:80%;
   }
   div.inQuestAnalysisBox{
+    div.errQuestAnalysisBox{
+      margin-top:20px;
+      p.err{
+        text-align:center;
+        font-weight: bold;
+      }
+    }
     div.questTitle{
       background: #f0f4e6;
       padding:6px 8px;

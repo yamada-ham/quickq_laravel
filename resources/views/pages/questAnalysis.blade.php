@@ -4,7 +4,7 @@
 <div class="questAnalysisBox">
 <div class="inQuestAnalysisBox">
   @if($errors->has('code'))
-  <div class="errCreateQuestBox">
+  <div class="errQuestAnalysisBox">
     <p class='err'>{{$errors->first('code')}}</p>
   </div>
   @else
