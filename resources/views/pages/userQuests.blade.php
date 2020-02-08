@@ -12,7 +12,7 @@
           <p class="answerNum"><img src='{{asset('./images/icon/answerNumIcon.png')}}' class="answerNumIcon"><span>{{$quest->numberOfResponses}}<span></p>
         </div>
         <div class="questHistoryTitle">
-          <p><a>{{$quest->questTitle}}</a></p>
+          <p><a href="{{action('QuestAnalysisController@get',['code'=>$quest->code])}}">{{$quest->questTitle}}</a></p>
         </div>
       </li>
       @endforeach

@@ -11,6 +11,8 @@ Route::get('/user_account','UserAccountController@get');
 
 Route::get('/user_quests','UserQuestsController@get');
 
+Route::get('/quest_analysis','QuestAnalysisController@get');
+
 Route::get('/user_account_info_confirm','UserAccountInfoConfirmController@get');
 Route::get('/user_account_info_change','UserAccountInfoChangeController@get');
 Route::post('/user_account_info_change','UserAccountInfoChangeController@post');
