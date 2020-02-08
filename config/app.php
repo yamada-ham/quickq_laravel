@@ -178,6 +178,10 @@ return [
         App\Providers\CategoryServiceProvider::class,
         App\Providers\CreateQuestServiceProvider::class,
         App\Providers\QuestAnalysisProvider::class,
+
+        App\Providers\AnswerQuestServiceProvider::class,
+
+
         Barryvdh\Debugbar\ServiceProvider::class,
     ],
 

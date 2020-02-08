@@ -3,6 +3,11 @@
 @section('content')
   <div class="answerBox">
     <div class="inAnswerBox">
+    @if ($errors->has('code'))
+      <div><p>{{$errors->first('code')}}</p></div>
+    @else
+
+
       @if($checkAnswer)
         <div class="isAnswered"><p>回答ありがとうございました。二度目の回答はできません</p></div>
         <div class="chartBox">
@@ -44,7 +49,12 @@
         @csrf
         <input type="hidden" name="questTitle" value="@if(isset($quest->questTitle)) {{$quest->questTitle}} @endif">
         <div class="parmanentQuestBox clear">
-          <p>Q.あなたの年齢と性別をお答えください。</p>
+          <p>Q.あなたの年齢と性別をお答えください。
+            @if($errors->has('age'))
+            <div class="errCreateQuestBox">
+            <p class='err'>{{$errors->first('age')}}</p></div>
+            @endif
+          </p>
           <div class="ageSelectBox"><select name = "age">
             <option selected disabled>年齢</option>
             <option value="00">10才未満</option>
@@ -83,6 +93,7 @@
         <input type="hidden" name="token" value="">
       </form>
       @endif
+    @endif
     </div>
   </div>
 @endsection

@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\AnswerQuestPostRequest;
+use App\Http\Requests\AnswerQuestGetRequest;
+
 class AnswerQuestController extends Controller
 {
-    public function get(Request $request){
+    public function get(AnswerQuestGetRequest $request){
 
       $answeredQuest = DB::table('answers')->whereRaw(
         'code = ? and remote_addr = ? and user_agent = ?',[$request->code,$_SERVER['REMOTE_ADDR'],$_SERVER['HTTP_USER_AGENT']])->first();
@@ -69,7 +72,7 @@ class AnswerQuestController extends Controller
 
     }
 
-    public function post(Request $request){
+    public function post(AnswerQuestPostRequest $request){
       $param = [
         'code' => $request->code,
         'age' => $request->age,
