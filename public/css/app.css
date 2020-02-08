@@ -1463,12 +1463,19 @@ div.paginationBox div.inPaginationBox ul.pagination li span {
   color: #000000;
   float: left;
   margin-right: 2px;
-  padding: 8px 16px;
+  padding: 4px 8px;
   text-decoration: none;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   border: 1px solid #ddd;
   box-sizing: border-box;
+}
+
+@media only screen and (min-width: 991px) {
+  div.paginationBox div.inPaginationBox ul.pagination li a,
+  div.paginationBox div.inPaginationBox ul.pagination li span {
+    padding: 8px 16px;
+  }
 }
 
 div.paginationBox div.inPaginationBox ul.pagination li a.active,

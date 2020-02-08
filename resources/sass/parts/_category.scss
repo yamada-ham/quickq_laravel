@@ -63,11 +63,14 @@ div.paginationBox{
           color: #000000;
           float: left;
           margin-right:2px;
-          padding: 8px 16px;
+          padding: 4px 8px;
           text-decoration: none;
           transition: background-color .3s;
           border: 1px solid #ddd;
           box-sizing:border-box;
+          @include media(l){
+            padding: 8px 16px;
+          }
           &.active{
             background-color: #4CAF50;
             color: white;
