@@ -177,6 +177,7 @@ return [
 
         App\Providers\CategoryServiceProvider::class,
         App\Providers\CreateQuestServiceProvider::class,
+        App\Providers\QuestAnalysisProvider::class,
         Barryvdh\Debugbar\ServiceProvider::class,
     ],
 

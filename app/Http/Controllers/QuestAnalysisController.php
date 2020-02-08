@@ -5,14 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\QuestAnalysisRequest;
 class QuestAnalysisController extends Controller
 {
     public function __construct(){
       $this->middleware('auth');
     }
 
-    public function get(Request $request){
-      $quest = DB::table('quests')->where('code',$request->code)->select('choicesList','numberOfResponses')->first();
+    public function get(QuestAnalysisRequest $request){
+      $quest = DB::table('quests')->where('code',$request->code)->select('questTitle','choicesList','numberOfResponses')->first();
 
       $choicesList = explode(',',$quest->choicesList);
       $numberOfResponses = $quest->numberOfResponses;
@@ -31,7 +32,7 @@ class QuestAnalysisController extends Controller
           $count = DB::table('answers')->whereRaw('code = ? and choice = ? and age = ?',[$request->code,$choice,$age])->count();
           $array[] = $count;
         }
-        $ageVotes[] = $array;
+        $ageVotes[$choice] = $array;
         $array = [];
       }
 

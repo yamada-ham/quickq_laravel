@@ -3,7 +3,12 @@
 @section('content')
 <div class="questAnalysisBox">
 <div class="inQuestAnalysisBox">
-  <div class="questTitle"><p><span>アンケート内容：</span></p></div>
+  @if($errors->has('code'))
+  <div class="errCreateQuestBox">
+    <p class='err'>{{$errors->first('code')}}</p>
+  </div>
+  @else
+  <div class="questTitle"><p><span>アンケート内容：</span>{{$quest->questTitle}}</p></div>
   <div class="chartBox">
   <div class="inChartBox">
     <h3>総合結果</h3>
@@ -144,6 +149,7 @@
     }
   });
   </script>
+@endif
 </div>
 </div>
 
