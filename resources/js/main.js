@@ -74,12 +74,12 @@ class Quickq{
   slide(){
     if($(".accordion_ul").length > 0){
       $(window).on("resize",()=>{
-        if(window.innerWidth >= 990){
+        if(window.innerWidth >= 767){
           location.reload();
           return;
         }
       })
-      if(window.innerWidth >= 991){
+      if(window.innerWidth >= 768){
         $('.accordion_ul ul').show();
         return;
       }
