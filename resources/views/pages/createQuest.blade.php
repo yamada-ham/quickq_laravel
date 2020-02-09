@@ -61,7 +61,7 @@
         </div>
 
         <div class="childInCreateCategoryBox">
-          <select name="childCategory" class="childCategory" disabled>
+          <select name="childCategory" class="childCategory">
             <option value="" selected="selected" disabled>選択</option>
             @foreach($categories as $key => $arr)
               @foreach($arr as $val)

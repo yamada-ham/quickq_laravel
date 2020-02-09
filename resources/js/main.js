@@ -122,10 +122,21 @@ class Quickq{
     var original = $childCategory.html(); //後のイベントで、不要なoption要素を削除するため、オリジナルをとっておく
 
   //htmlが再読み込みされたときに状態を保持しておく
-    if ($('.parentCategory').val() == "") {
-      $childCategory.prop('disabled', false);
+    if ($('.parentCategory').val() == null) {
+      $childCategory.prop('disabled', true);
     } else {
-      $childCategory.prop('disabled',true);
+      var val1 = $('.parentCategory').val();
+
+    //削除された要素をもとに戻すため.html(original)を入れておく
+      $childCategory.html(original).find('option').each(function() {
+      var val2 = $(this).data('val'); //data-valの値を取得
+
+      //valueと異なるdata-valを持つ要素を削除
+        if (val1 != val2) {
+          $(this).not(':first-child').remove();
+        }
+      });
+      $childCategory.prop('disabled',false);
     }
     $('.parentCategory').change(function() {
       //選択された親のvalueを取得し変数に入れる
