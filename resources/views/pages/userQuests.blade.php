@@ -19,4 +19,6 @@
     </ul>
   </div>
 </div>
+{{$quests->links('vendor.pagination.my-custom')}}
+
 @endsection

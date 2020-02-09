@@ -86,7 +86,16 @@ class AnswerQuestController extends Controller
         'modified'=> new \DateTime(),
       ];
 
+      $numberOfResponses = DB::table('quests')->where('code',$request->code)->value('numberOfResponses');
+
+      $numberOfResponses++;
+
+
+      DB::table('quests')->where('code',$request->code)->update(['numberOfResponses'=>
+    $numberOfResponses]);
       DB::transaction(function () use($param) {
+
+        // DB::update('update quests set numberOfResponses = numberOfResponses + 1 where id = :id',[$request->id]);
         DB::table('answers')->insert($param);
       });
 

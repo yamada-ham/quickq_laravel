@@ -46,6 +46,7 @@ class CreateQuestController extends Controller
 
       DB::table('quests')->insert($param);
 
-      return view('pages.createQuest');
+      return redirect()->action('UserQuestsController@get');
+      // return view('pages.index');
     }
 }

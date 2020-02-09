@@ -14,7 +14,7 @@ class UserQuestsController extends Controller
 
     public function get(){
       $userId = Auth::user()->id;
-      $quests = UserQuestsModel::where('userId',$userId)->orderBy('id')->get(['id','code','questTitle','userId','numberOfResponses','created_at']);
+      $quests = UserQuestsModel::where('userId',$userId)->orderBy('id','desc')->select(['id','code','questTitle','userId','numberOfResponses','created_at'])->paginate(10);
       // \Debugbar::info($quests);
       return view('pages.userQuests',['quests'=>$quests]);
     }
