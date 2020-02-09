@@ -4,9 +4,9 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Validatiion\Validator;
-use App\Http\Validators\CreateQuestValidator;
+use App\Http\Validators\QuickqValidator;
 
-class CreateQuestServiceProvider extends ServiceProvider
+class QuickqServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -27,7 +27,7 @@ class CreateQuestServiceProvider extends ServiceProvider
     {
       $validator = $this ->app['validator'];
       $validator->resolver(function($translator,$data,$rules,$messages){
-      return new CreateQuestValidator($translator,$data,$rules,$messages);
+      return new QuickqValidator($translator,$data,$rules,$messages);
       });
     }
 }

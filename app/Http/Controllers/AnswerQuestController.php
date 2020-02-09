@@ -66,6 +66,7 @@ class AnswerQuestController extends Controller
           $checkAnswer = false;
 
           $choicesList = explode(',',$quest->choicesList);
+
           return view('pages.answerQuest',['checkAnswer'=>$checkAnswer,'quest'=>$quest,'choicesList'=>$choicesList]);
         }
 

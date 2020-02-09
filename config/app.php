@@ -176,10 +176,9 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\CategoryServiceProvider::class,
-        App\Providers\CreateQuestServiceProvider::class,
-        App\Providers\QuestAnalysisProvider::class,
-
-        App\Providers\AnswerQuestServiceProvider::class,
+        // App\Providers\CreateQuestServiceProvider::class,
+        // App\Providers\QuestAnalysisProvider::class,
+        App\Providers\QuickqServiceProvider::class,
 
 
         Barryvdh\Debugbar\ServiceProvider::class,

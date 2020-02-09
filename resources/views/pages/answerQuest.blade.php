@@ -4,7 +4,7 @@
   <div class="answerBox">
     <div class="inAnswerBox">
     @if ($errors->has('code'))
-      <div><p>{{$errors->first('code')}}</p></div>
+      <div class="errCodeAnswerQuestBox"><p>{{$errors->first('code')}}</p></div>
     @else
 
 
@@ -38,7 +38,7 @@
                     position:'outside',
                     showActualPercentages: true,
                     outsidePadding: 8,
-                    textMargin: 2,
+                    textMargin: 5,
                 }
               }
             }

@@ -746,6 +746,11 @@ div.answerBox div.inAnswerBox {
   }
 }
 
+div.answerBox div.inAnswerBox div.errCodeAnswerQuestBox p {
+  text-align: center;
+  font-weight: bold;
+}
+
 div.answerBox div.inAnswerBox div.isAnswered {
   width: 90%;
   margin-left: auto;
