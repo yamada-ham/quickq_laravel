@@ -51,8 +51,14 @@
         <div class="parmanentQuestBox clear">
           <p>Q.あなたの年齢と性別をお答えください。
             @if($errors->has('age'))
-            <div class="errCreateQuestBox">
-            <p class='err'>{{$errors->first('age')}}</p></div>
+            <div class="errAnswerQuestBox">
+              <p class='err'>{{$errors->first('age')}}</p>
+            </div>
+            @endif
+            @if($errors->has('sex'))
+            <div class="errAnswerQuestBox">
+              <p class='err'>{{$errors->first('sex')}}</p>
+            </div>
             @endif
           </p>
           <div class="ageSelectBox"><select name = "age">
@@ -75,6 +81,11 @@
 
         <div class="answerRadioBox">
           <p>Q.@if(isset($quest->questTitle)) {{$quest->questTitle}} @endif<br>(該当するものを一つお答えください)</p>
+            @if($errors->has('choice'))
+            <div class="errAnswerQuestBox">
+              <p class='err'>{{$errors->first('choice')}}</p>
+            </div>
+            @endif
           <ul class="inAnswerRadioBox">
             @if(isset($choicesList))
             @for($i = 0; $i < ($quest->choicesNum);$i++)
