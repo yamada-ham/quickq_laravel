@@ -12628,6 +12628,7 @@ function () {
   function Quickq() {
     _classCallCheck(this, Quickq);
 
+    // this.answerRadioHover();
     this.disablReturn();
     this.drwer();
     this.choiceInputBtn();
@@ -12855,6 +12856,32 @@ $(function () {
   'use strict';
 
   var quickq = new Quickq();
+
+  if ($('div.answerRadioBox')[0]) {
+    var li = $('ul.inAnswerRadioBox li');
+    li.each(function (index) {
+      var that = $(this);
+      $(this).hover(function () {
+        that.children('label').css({
+          'background': '#d6a9a9'
+        });
+        that.children('input.answerRadio').css({
+          'background': '#d6a9a9'
+        });
+      }, function () {
+        that.children('label').css({
+          'background': ''
+        });
+        that.children('input.answerRadio').css({
+          'background': ''
+        });
+      });
+    }); // li.each(function(i,el){
+    //   el.hover(()=>{
+    //     console.log('hello');
+    //   });
+    // });
+  }
 });
 
 /***/ }),

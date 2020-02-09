@@ -967,10 +967,6 @@ div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li inp
   border-radius: 50%;
 }
 
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:hover {
-  background: #d6a9a9;
-}
-
 div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li input.answerRadio:checked {
   background: #da3c41;
 }
@@ -997,14 +993,10 @@ div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li inp
 
 div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li label {
   display: inline-block;
-  width: 80%;
+  width: 94%;
   padding: 4px 10px;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li label:hover {
-  background: #d6a9a9;
 }
 
 div.answerBox div.inAnswerBox form div.errAnswerBox {

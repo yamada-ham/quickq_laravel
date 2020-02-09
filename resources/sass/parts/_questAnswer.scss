@@ -211,9 +211,9 @@ div.answerBox{
               &:after{
                 border-radius: 50%;
               }
-              &:hover{
-                background: #d6a9a9;
-              }
+              // &:hover{
+              //   background: #d6a9a9;
+              // }
               &:checked{
                 background: #da3c41;
                 &:before{
@@ -238,13 +238,13 @@ div.answerBox{
             }
             label{
               display: inline-block;
-              width:80%;
+              width:94%;
               padding:4px 10px;
               border-radius: 4px;
               box-sizing: border-box;
-              &:hover{
-                background: #d6a9a9;
-              }
+              // &:hover{
+              //   background: #d6a9a9;
+              // }
             }
           }
         }

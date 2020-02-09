@@ -1,5 +1,6 @@
 class Quickq{
   constructor(){
+    // this.answerRadioHover();
     this.disablReturn();
     this.drwer();
     this.choiceInputBtn();
@@ -9,6 +10,9 @@ class Quickq{
     this.createCategory();
     this.getTextareaLength();
   }
+
+
+
   disablReturn(){
     if($('input[type=submit]').length > 0){
       if( window.event.keyCode == 13 ){
@@ -193,4 +197,23 @@ $(function(){
   'use strict';
   let quickq = new Quickq();
 
+  if($('div.answerRadioBox')[0]){
+    let li = $('ul.inAnswerRadioBox li');
+    li.each(function(index){
+      let that = $(this);
+      $(this).hover(function(){
+        that.children('label').css({'background':'#d6a9a9'});
+        that.children('input.answerRadio').css({'background':'#d6a9a9'});
+      },function(){
+        that.children('label').css({'background':''});
+        that.children('input.answerRadio').css({'background':''});
+
+      });
+    });
+    // li.each(function(i,el){
+    //   el.hover(()=>{
+    //     console.log('hello');
+    //   });
+    // });
+  }
 });
