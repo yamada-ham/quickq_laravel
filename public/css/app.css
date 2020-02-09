@@ -930,6 +930,12 @@ div.answerBox div.inAnswerBox form div.answerRadioBox p {
   margin-bottom: 4px;
 }
 
+div.answerBox div.inAnswerBox form div.answerRadioBox div.errAnswerQuestBox p.err {
+  color: #ff002e;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
 div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox {
   background: #eef0d7;
   padding: 10px 20px;
