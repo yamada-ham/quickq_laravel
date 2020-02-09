@@ -49,18 +49,17 @@
         @csrf
         <input type="hidden" name="questTitle" value="@if(isset($quest->questTitle)) {{$quest->questTitle}} @endif">
         <div class="parmanentQuestBox clear">
-          <p>Q.あなたの年齢と性別をお答えください。
-            @if($errors->has('age'))
-            <div class="errAnswerQuestBox">
-              <p class='err'>{{$errors->first('age')}}</p>
-            </div>
-            @endif
-            @if($errors->has('sex'))
-            <div class="errAnswerQuestBox">
-              <p class='err'>{{$errors->first('sex')}}</p>
-            </div>
-            @endif
-          </p>
+          <p>Q.あなたの年齢と性別をお答えください。</p>
+          @if($errors->has('age'))
+          <div class="errAnswerQuestBox">
+            <p class='err'>{{$errors->first('age')}}</p>
+          </div>
+          @endif
+          @if($errors->has('sex'))
+          <div class="errAnswerQuestBox">
+            <p class='err'>{{$errors->first('sex')}}</p>
+          </div>
+          @endif
           <div class="ageSelectBox"><select name = "age">
             <option selected disabled>年齢</option>
             <option value="00">10才未満</option>

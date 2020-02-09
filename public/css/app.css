@@ -731,7 +731,7 @@ div.contentsBox div.inContentsBox div.signupBox p.inSignupBox a {
 }
 
 div.answerBox {
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 div.answerBox div.inAnswerBox {
@@ -742,7 +742,7 @@ div.answerBox div.inAnswerBox {
 
 @media only screen and (min-width: 991px) {
   div.answerBox div.inAnswerBox {
-    width: 80%;
+    width: 70%;
   }
 }
 
@@ -799,21 +799,27 @@ div.answerBox div.inAnswerBox div.linkTopCase p a {
 }
 
 div.answerBox div.inAnswerBox form div.parmanentQuestBox {
-  margin-bottom: 50px;
+  margin-bottom: 42px;
 }
 
 div.answerBox div.inAnswerBox form div.parmanentQuestBox p {
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4px;
 }
 
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.errAnswerQuestBox p.err {
+  color: #ff002e;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
 div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox {
   overflow: hidden;
-  width: 30%;
+  width: 20%;
   float: left;
-  margin-left: 10%;
+  margin-left: 0%;
   margin-right: 0%;
   text-align: center;
   box-sizing: border-box;
@@ -862,7 +868,7 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.ageSelectBox:before
 
 div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox {
   float: left;
-  width: 47%;
+  width: 37%;
   margin-left: 3%;
   margin-right: 10%;
 }
@@ -896,6 +902,11 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label {
   line-height: 1;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  box-sizing: border-box;
+}
+
+div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label.man {
+  border-right: 1px solid #d6dee3;
 }
 
 div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:first-of-type {
@@ -907,7 +918,7 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label:last-o
 }
 
 div.answerBox div.inAnswerBox form div.answerRadioBox {
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
