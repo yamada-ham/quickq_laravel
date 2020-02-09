@@ -12678,8 +12678,8 @@ function () {
     value: function drwer() {
       if ($("#menuBtn") != null) {
         var menu = $('.drwerMenuBox');
-        var btn = $('#menubtn');
-        $('.overlay').prepend('<div class="btnCloseBox"><img src="./images/icon/btnClose.png"></div>');
+        var btn = $('#menubtn'); // $('.overlay').prepend('<div class="btnCloseBox"><img src="./images/icon/btnClose.png"></div>');
+
         btn.on('click', function () {
           btn.addClass('drawer');
 

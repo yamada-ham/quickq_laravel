@@ -35,4 +35,4 @@
   </div>
 </nav>
 
-<div class="overlay"></div>
+<div class="overlay"><div class="btnCloseBox"><img src="{{asset('./images/icon/btnClose.png')}}"></div></div>
