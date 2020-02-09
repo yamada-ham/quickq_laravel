@@ -1,6 +1,6 @@
 class Quickq{
   constructor(){
-    // this.answerRadioHover();
+    this.answerRadioHover();
     this.disablReturn();
     this.drwer();
     this.choiceInputBtn();
@@ -11,6 +11,22 @@ class Quickq{
     this.getTextareaLength();
   }
 
+  answerRadioHover(){
+    if($('div.answerRadioBox')[0]){
+      let li = $('ul.inAnswerRadioBox li');
+      li.each(function(index){
+        let that = $(this);
+        $(this).hover(function(){
+          that.children('label').css({'background':'#d6a9a9'});
+          that.children('input.answerRadio').css({'background':'#d6a9a9'});
+        },function(){
+          that.children('label').css({'background':''});
+          that.children('input.answerRadio').css({'background':''});
+
+        });
+      });
+    }
+  }
 
 
   disablReturn(){
@@ -196,24 +212,4 @@ class Quickq{
 $(function(){
   'use strict';
   let quickq = new Quickq();
-
-  if($('div.answerRadioBox')[0]){
-    let li = $('ul.inAnswerRadioBox li');
-    li.each(function(index){
-      let that = $(this);
-      $(this).hover(function(){
-        that.children('label').css({'background':'#d6a9a9'});
-        that.children('input.answerRadio').css({'background':'#d6a9a9'});
-      },function(){
-        that.children('label').css({'background':''});
-        that.children('input.answerRadio').css({'background':''});
-
-      });
-    });
-    // li.each(function(i,el){
-    //   el.hover(()=>{
-    //     console.log('hello');
-    //   });
-    // });
-  }
 });
