@@ -334,7 +334,6 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li.login {
   cursor: pointer;
   padding: 4px 0;
   border-bottom: solid 2px #d27d00;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7ff49), to(#68ec00));
   background: linear-gradient(#b7ff49 0%, #68ec00 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
@@ -397,8 +396,7 @@ div.topImgBox div.inTopImgBox img {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (min-width: 991px) {
@@ -409,10 +407,8 @@ div.topImgBox div.inTopImgBox img {
 
 @media only screen and (min-width: 767px) {
   ul.questLimitBox {
-    display: -webkit-box;
     display: flex;
-    -webkit-box-pack: center;
-            justify-content: center;
+    justify-content: center;
     margin-bottom: 4px;
   }
 }
@@ -526,9 +522,7 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1:bef
   font-weight: bold;
   position: absolute;
   right: 15px;
-  -webkit-transform-origin: 50% 58%;
-          transform-origin: 50% 58%;
-  -webkit-transition: 0.3s;
+  transform-origin: 50% 58%;
   transition: 0.3s;
 }
 
@@ -539,8 +533,7 @@ div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1:bef
 }
 
 div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li section h1.rotate225:before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
   color: black;
   content: "-";
 }
@@ -682,7 +675,6 @@ div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=su
   cursor: pointer;
   padding: 4px 0;
   border-bottom: solid 2px #d27d00;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7ff49), to(#68ec00));
   background: linear-gradient(#b7ff49 0%, #68ec00 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
@@ -705,8 +697,7 @@ div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox label {
 
 div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox label input[type=checkbox] {
   vertical-align: middle;
-  -webkit-transform: translate(0%, -25%);
-          transform: translate(0%, -25%);
+  transform: translate(0%, -25%);
 }
 
 @media only screen and (min-width: 991px) {
@@ -900,7 +891,6 @@ div.answerBox div.inAnswerBox form div.parmanentQuestBox div.sexBox label {
   font-size: 16px;
   text-align: center;
   line-height: 1;
-  -webkit-transition: 0.2s;
   transition: 0.2s;
   box-sizing: border-box;
 }
@@ -957,7 +947,6 @@ div.answerBox div.inAnswerBox form div.answerRadioBox ul.inAnswerRadioBox li inp
   height: 30px;
   margin-right: 0.5rem;
   cursor: pointer;
-  -webkit-transition: all 0.15s ease-out 0s;
   transition: all 0.15s ease-out 0s;
   color: #ffffff;
   border: none;
@@ -1031,7 +1020,6 @@ div.answerBox div.inAnswerBox form div.answerSubmitBox input[type=submit] {
   cursor: pointer;
   padding: 4px 0;
   border-bottom: solid 2px #d27d00;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7ff49), to(#68ec00));
   background: linear-gradient(#b7ff49 0%, #68ec00 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
@@ -1141,7 +1129,6 @@ div.createQuestBox div.inCreateQuestBox div.choicesListBox div.addRemoveChoiceBo
   text-align: center;
   overflow: hidden;
   font-weight: bold;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#e8e8e8), to(#d6d6d6));
   background-image: linear-gradient(#e8e8e8 0%, #d6d6d6 100%);
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.66);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.5), 0 2px 2px rgba(0, 0, 0, 0.19);
@@ -1280,7 +1267,6 @@ div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox input[type=subm
   cursor: pointer;
   padding: 4px 0;
   border-bottom: solid 2px #d27d00;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7ff49), to(#68ec00));
   background: linear-gradient(#b7ff49 0%, #68ec00 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
@@ -1396,8 +1382,7 @@ div.accountInfoBox div.inAccountInfoBox div.accountServiceListBox ul li a img {
   position: absolute;
   top: 50%;
   right: 0%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 div.theCategoryBox {
@@ -1464,12 +1449,9 @@ div.paginationBox {
 }
 
 div.paginationBox div.inPaginationBox ul.pagination {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 div.paginationBox div.inPaginationBox ul.pagination li a,
@@ -1479,7 +1461,6 @@ div.paginationBox div.inPaginationBox ul.pagination li span {
   margin-right: 2px;
   padding: 4px 8px;
   text-decoration: none;
-  -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
   border: 1px solid #ddd;
   box-sizing: border-box;
@@ -1578,7 +1559,6 @@ div.changeFormBox div.inChangeFormBox form p.submitBox input[type=submit] {
   cursor: pointer;
   padding: 4px 0;
   border-bottom: solid 2px #d27d00;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7ff49), to(#68ec00));
   background: linear-gradient(#b7ff49 0%, #68ec00 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
@@ -1645,7 +1625,6 @@ div.accountConfirmBox div.inAccountConfirmBox div.userAccountInfoChangeLink p a 
   cursor: pointer;
   padding: 6px 10px;
   border-bottom: solid 2px #adadad;
-  background: -webkit-gradient(linear, left top, left bottom, from(#dcdddb), to(#cbcbcb));
   background: linear-gradient(#dcdddb 0%, #cbcbcb 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
@@ -1695,7 +1674,6 @@ div.accountConfirmBox div.inAccountConfirmBox div.userAccountLink p a {
   cursor: pointer;
   padding: 6px 10px;
   border-bottom: solid 2px #d27d00;
-  background: -webkit-gradient(linear, left top, left bottom, from(#b7ff49), to(#68ec00));
   background: linear-gradient(#b7ff49 0%, #68ec00 100%);
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
   color: #000000;
