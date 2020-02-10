@@ -19,9 +19,13 @@
                 @if ($errors->has('email'))
                       {{ $errors->first('email') }}
                 @endif
-                <button type="submit" class="">
-                    {{ __('Send Password Reset Link') }}
-                </button>
+        </div>
+        <div class="submitBox">
+        <p class="inSubmitBox">
+        <button type="submit" class="">
+            {{ __('Send Password Reset Link') }}
+        </button>
+        </p>
         </div>
     </form>
 </div>
