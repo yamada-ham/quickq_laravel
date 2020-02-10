@@ -84,7 +84,7 @@ div.contentsBox{
             }
             margin-bottom: 14px;
             p.inSubmitBox{
-              input{
+              input,button{
                 &[type="submit"]{
                   display : inline-block;
                   border-radius : 5%;

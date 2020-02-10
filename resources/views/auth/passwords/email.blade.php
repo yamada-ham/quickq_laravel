@@ -1,41 +1,29 @@
 @extends('layouts.main2')
 
 @section('content')
-
-<div class="card-header">{{ __('Reset Password') }}</div>
-
-<div class="card-body">
+<div class="contentsBox">
+<div class="inContentsBox">
+  <h2>アカウントのパスワードをリセット</h2>
+  <hr>
     @if (session('status'))
-        <div class="alert alert-success" role="alert">
-            {{ session('status') }}
-        </div>
+      {{ session('status') }}
     @endif
 
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
+        <div class="inputTextBox">
 
-        <div class="form-group row">
-            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-            <div class="col-md-6">
-                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
-
+            <label for="email" class="emailLabel">email:</label>
+            <p class="typeText">
+                <input id="email" type="email" class="" name="email" value="{{ old('email') }}" required></p>
                 @if ($errors->has('email'))
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $errors->first('email') }}</strong>
-                    </span>
+                      {{ $errors->first('email') }}
                 @endif
-            </div>
-        </div>
-
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="">
                     {{ __('Send Password Reset Link') }}
                 </button>
-            </div>
         </div>
     </form>
 </div>
-
+</div>
 @endsection

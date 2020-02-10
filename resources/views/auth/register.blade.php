@@ -28,7 +28,7 @@
           <p class="typePassword">
             <input type="password" name="password" placeholder="•••••••••">
           </p>
-          <p class="err">@if ($errors->has('password'))<strong>{{ $errors->first('password') }}</strong>@endif</p>
+
         </div>
 
         <div class="inputPasswordBox">
@@ -36,12 +36,12 @@
           <p class="typePassword">
             <input id="password-confirm" type="password" name="password_confirmation" placeholder="•••••••••" required>
           </p>
-        </div>
+         </div>
         <div class="submitBox">
         <p class="inSubmitBox">
           <input type="submit" name="id" value="サインアップ">
         </p>
-      </div>
+        </div>
       <div class="signupBox">
         <p class="inSignupBox"><a href="{{route('login')}}">すでにアカウントはお持ちですか？</a></p>
       </div>

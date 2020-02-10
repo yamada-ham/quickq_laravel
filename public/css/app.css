@@ -667,7 +667,8 @@ div.contentsBox div.inContentsBox form div.submitBox {
   }
 }
 
-div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit] {
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit],
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox button[type=submit] {
   display: inline-block;
   border-radius: 5%;
   font-size: 1rem;
@@ -682,7 +683,8 @@ div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=su
   width: 100%;
 }
 
-div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit]:hover {
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit]:hover,
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox button[type=submit]:hover {
   opacity: 1;
 }
 
