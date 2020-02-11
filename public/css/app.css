@@ -344,6 +344,10 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li.login {
   margin-bottom: 30px;
 }
 
+nav.drwerMenuBox div.inDrwerMenuBox ul li.login:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
 nav.drwerMenuBox div.inDrwerMenuBox ul li.login a {
   display: block;
 }
@@ -718,6 +722,11 @@ div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox button[type=s
   opacity: 1;
 }
 
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox input[type=submit]:active,
+div.contentsBox div.inContentsBox form div.submitBox p.inSubmitBox button[type=submit]:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
 div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox {
   margin-top: 6px;
   margin-left: 8px;
@@ -757,6 +766,10 @@ div.contentsBox div.inContentsBox div.signupBox p.inSignupBox a {
   width: 100%;
   background-image: -moz-linear-gradient(top, #e7e9ec 0%, #cbcdd1);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e7e9ec), to(#cbcdd1));
+}
+
+div.contentsBox div.inContentsBox div.signupBox p.inSignupBox a:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 div.verifyBox div.msgBox {
@@ -1404,6 +1417,10 @@ div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox input[type=subm
   opacity: 1;
   margin-bottom: 30px;
   width: 100%;
+}
+
+div.createQuestBox div.inCreateQuestBox div.createQuestSubmitBox input[type=submit]:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 div.accountInfoBox div.inAccountInfoBox div.accountBarBox {

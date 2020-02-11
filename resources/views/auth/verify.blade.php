@@ -9,7 +9,7 @@
   @endif
 
   <div class="inVerifyBox">
-    
+
     <div class="verifyTextBox">
       <p>{{ __('メールを確認してください。') }}</p>
     </div>
@@ -19,7 +19,7 @@
 
     <div class="logoutRegisterBox">
       <p>※無効なメールアドレスで登録しようとした場合</p>
-      <form action="{{ route('logout') }}" method="POST" id="logout">
+      <form action="{{ route('logout') }}" method="POST" id="logout" target="_blank" rel="noopener noreferrer">
         <p><input type="submit" value="やり直し">
         </p>
         @csrf
