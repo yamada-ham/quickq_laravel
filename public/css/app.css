@@ -601,17 +601,25 @@ div.contentsBox div.inContentsBox div.msgBox p {
   padding: 6px 4px;
 }
 
-div.contentsBox div.inContentsBox form div.inputTextBox {
+div.contentsBox div.inContentsBox form div.inputTextBox,
+div.contentsBox div.inContentsBox form div.inputEmailBox {
   margin-bottom: 20px;
 }
 
-div.contentsBox div.inContentsBox form div.inputTextBox label {
+div.contentsBox div.inContentsBox form div.inputTextBox label,
+div.contentsBox div.inContentsBox form div.inputEmailBox label {
   display: block;
   margin-bottom: 4px;
 }
 
-div.contentsBox div.inContentsBox form div.inputTextBox input[type=text],
-div.contentsBox div.inContentsBox form div.inputTextBox input[type=email] {
+div.contentsBox div.inContentsBox form div.inputTextBox p.typeText input[type=text],
+div.contentsBox div.inContentsBox form div.inputTextBox p.typeText input[type=email],
+div.contentsBox div.inContentsBox form div.inputTextBox p.emailText input[type=text],
+div.contentsBox div.inContentsBox form div.inputTextBox p.emailText input[type=email],
+div.contentsBox div.inContentsBox form div.inputEmailBox p.typeText input[type=text],
+div.contentsBox div.inContentsBox form div.inputEmailBox p.typeText input[type=email],
+div.contentsBox div.inContentsBox form div.inputEmailBox p.emailText input[type=text],
+div.contentsBox div.inContentsBox form div.inputEmailBox p.emailText input[type=email] {
   font-size: 1rem;
   box-sizing: border-box;
   padding: 5px;
@@ -621,8 +629,14 @@ div.contentsBox div.inContentsBox form div.inputTextBox input[type=email] {
   border-radius: 4px;
 }
 
-div.contentsBox div.inContentsBox form div.inputTextBox input[type=text]:focus,
-div.contentsBox div.inContentsBox form div.inputTextBox input[type=email]:focus {
+div.contentsBox div.inContentsBox form div.inputTextBox p.typeText input[type=text]:focus,
+div.contentsBox div.inContentsBox form div.inputTextBox p.typeText input[type=email]:focus,
+div.contentsBox div.inContentsBox form div.inputTextBox p.emailText input[type=text]:focus,
+div.contentsBox div.inContentsBox form div.inputTextBox p.emailText input[type=email]:focus,
+div.contentsBox div.inContentsBox form div.inputEmailBox p.typeText input[type=text]:focus,
+div.contentsBox div.inContentsBox form div.inputEmailBox p.typeText input[type=email]:focus,
+div.contentsBox div.inContentsBox form div.inputEmailBox p.emailText input[type=text]:focus,
+div.contentsBox div.inContentsBox form div.inputEmailBox p.emailText input[type=email]:focus {
   border: 1px solid #da3c41;
   outline: none;
   box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
@@ -712,6 +726,12 @@ div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox label {
 div.contentsBox div.inContentsBox form div.submitBox div.inputCheckBox label input[type=checkbox] {
   vertical-align: middle;
   transform: translate(0%, -25%);
+}
+
+div.contentsBox div.inContentsBox form div.errBox p {
+  color: #ff002e;
+  font-weight: bold;
+  margin-left: 8px;
 }
 
 @media only screen and (min-width: 991px) {

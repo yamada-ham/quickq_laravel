@@ -25,28 +25,27 @@ div.contentsBox{
       }
     }
     form{
-      div.inputTextBox{
+      div.inputTextBox,div.inputEmailBox{
         margin-bottom:20px;
         label{
           display:block;
           margin-bottom:4px;
         }
-        p.typeText{
-
-        }
-        input{
-          &[type='text'],&[type='email']{
-            font-size:1rem;
-            box-sizing: border-box;
-            padding: 5px;
-            width:100%;
-            letter-spacing: 1px;
-            border: 1px solid #1b2538;
-            border-radius: 4px;
-            &:focus{
-              border: 1px solid #da3c41;
-              outline: none;
-              box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+        p.typeText,p.emailText{
+          input{
+            &[type='text'],&[type='email']{
+              font-size:1rem;
+              box-sizing: border-box;
+              padding: 5px;
+              width:100%;
+              letter-spacing: 1px;
+              border: 1px solid #1b2538;
+              border-radius: 4px;
+              &:focus{
+                border: 1px solid #da3c41;
+                outline: none;
+                box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+              }
             }
           }
         }
@@ -124,6 +123,13 @@ div.contentsBox{
                   transform: translate(0%,-25%);
                 }
               }
+            }
+          }
+          div.errBox{
+            p{
+              color:#ff002e;
+              font-weight: bold;
+              margin-left:8px;
             }
           }
     }

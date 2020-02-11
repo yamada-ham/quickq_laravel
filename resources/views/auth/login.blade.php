@@ -7,13 +7,13 @@
   <hr>
   <form method="POST" action="{{ route('login') }}" id="login">
     @csrf
-    <div class="inputTextBox">
+    <div class="inputEmailBox">
       <label for="email" class="emailLabel">email:</label>
       <p class="typeText">
-        <input id="email" class="{{ $errors->has('email') ? ' is-invalid' : '' }}" type="text" name="email" value="{{ old('email') }}" placeholder="quick@example.com" required  autofocus>
+        <input id="email" type="text" name="email" value="{{ old('email') }}" placeholder="quick@example.com" required  autofocus>
       </p>
       @if ($errors->has('email'))
-        <span class="">{{ $errors->first('email') }}</span>
+        <div class="errBox"><p>{{ $errors->first('email') }}</p></div>
       @endif
     </div>
 
