@@ -20,5 +20,4 @@ Route::post('/user_account_info_change','UserAccountInfoChangeController@post');
 Route::get('/answer_quest','AnswerQuestController@get');
 Route::post('/answer_quest','AnswerQuestController@post');
 
-
-Auth::routes();
+Auth::routes(['verify' => true]);

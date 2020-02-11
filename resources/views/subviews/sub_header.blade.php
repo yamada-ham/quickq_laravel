@@ -9,11 +9,14 @@
         </a></h1>
       </div>
       <div class="loginInfoBox">
-        @if(Auth::check())
-        <p><a href={{action('UserAccountController@get')}}><span class="greet">{{Auth::user()->name}}</span><span class="account">Myアカウント</span></a></p>
+        @if(!empty(Auth::user()->email_verified_at))
+          @if(Auth::check())
+          <p><a href={{action('UserAccountController@get')}}><span class="greet">{{Auth::user()->name}}</span><span class="account">Myアカウント</span></a></p>
+          @endif
         @else
           <p><a href="{{route('login')}}">ログイン</a></p>
         @endif
+
       </div>
   </div><!-- inHeader -->
 </header>
