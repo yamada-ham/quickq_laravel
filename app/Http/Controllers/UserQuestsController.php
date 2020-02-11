@@ -9,7 +9,8 @@ use App\UserQuestsModel;
 class UserQuestsController extends Controller
 {
     public function __construct(){
-        $this->middleware('auth');
+        // $this->middleware('auth');
+        $this->middleware('verified');
     }
 
     public function get(){

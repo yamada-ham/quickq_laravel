@@ -23,6 +23,7 @@
 
 <nav class="drwerMenuBox">
   <div class="inDrwerMenuBox">
+    @if(!empty(Auth::user()->email_verified_at))
     @if(Auth::check())
       <h2 class="greet">Hello.{{Auth::user()->name}}さん</h2>
       <ul>
@@ -34,6 +35,7 @@
         @csrf
       </form></li>
       </ul>
+    @endif
     @else
       <ul>
       <li class="login"><a href="{{ route('login') }}">ログイン</a></li>
