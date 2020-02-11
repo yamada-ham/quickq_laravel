@@ -14,6 +14,16 @@ div.contentsBox{
     hr{
       margin-bottom:20px;
     }
+    div.msgBox{
+      border:double 4px #00670d;
+      margin-bottom:14px;
+      p{
+        color:#00d930;
+        font-size:1.2rem;
+        text-align: center;
+        padding:6px 4px;
+      }
+    }
     form{
       div.inputTextBox{
         margin-bottom:20px;

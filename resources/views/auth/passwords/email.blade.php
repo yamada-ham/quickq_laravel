@@ -5,9 +5,13 @@
 <div class="inContentsBox">
   <h2>アカウントのパスワードをリセット</h2>
   <hr>
+
     @if (session('status'))
-      {{ session('status') }}
+      <div class="msgBox">
+      <p>{{ session('status') }}</p>
+      </div>
     @endif
+
 
     <form method="POST" action="{{ route('password.email') }}">
         @csrf

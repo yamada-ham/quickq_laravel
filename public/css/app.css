@@ -589,6 +589,18 @@ div.contentsBox div.inContentsBox hr {
   margin-bottom: 20px;
 }
 
+div.contentsBox div.inContentsBox div.msgBox {
+  border: double 4px #00670d;
+  margin-bottom: 14px;
+}
+
+div.contentsBox div.inContentsBox div.msgBox p {
+  color: #00d930;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 6px 4px;
+}
+
 div.contentsBox div.inContentsBox form div.inputTextBox {
   margin-bottom: 20px;
 }
