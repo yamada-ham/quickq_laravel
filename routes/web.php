@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/','IndexController@get');
+Route::get('/home','HomeController@get');
 
 Route::get('/category','CategoryController@get');
 

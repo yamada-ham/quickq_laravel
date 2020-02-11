@@ -19,7 +19,7 @@ class RedirectIfAuthenticated
     {
         //ログインしている場合のリダイレクト先
         if (Auth::guard($guard)->check()) {
-            return redirect('/');
+            return redirect('/home');
         }
 
         return $next($request);
