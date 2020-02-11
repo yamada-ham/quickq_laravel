@@ -41,6 +41,13 @@ $app->singleton(
     App\Exceptions\Handler::class
 );
 
+
+switch ($_SERVER['SERVER_NAME'] ?? 'localhost') {
+    case 'localhost':
+        $app->loadEnvironmentFrom('.env.dev');
+        break;
+}
+
 /*
 |--------------------------------------------------------------------------
 | Return The Application
