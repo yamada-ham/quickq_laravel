@@ -42,6 +42,10 @@ input:focus {
   outline: none;
 }
 
+Button {
+  outline: none;
+}
+
 input[type=button] {
   overflow: visible;
   text-transform: none;
@@ -685,7 +689,7 @@ div.contentsBox div.inContentsBox form div.submitBox {
   margin-bottom: 14px;
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 767px) {
   div.contentsBox div.inContentsBox form div.submitBox {
     width: 50%;
     margin-left: auto;
@@ -734,7 +738,7 @@ div.contentsBox div.inContentsBox form div.errBox p {
   margin-left: 8px;
 }
 
-@media only screen and (min-width: 991px) {
+@media only screen and (min-width: 767px) {
   div.contentsBox div.inContentsBox div.signupBox {
     width: 50%;
     margin-left: auto;
@@ -753,6 +757,99 @@ div.contentsBox div.inContentsBox div.signupBox p.inSignupBox a {
   width: 100%;
   background-image: -moz-linear-gradient(top, #e7e9ec 0%, #cbcdd1);
   background-image: -webkit-gradient(linear, left top, left bottom, from(#e7e9ec), to(#cbcdd1));
+}
+
+div.verifyBox div.msgBox {
+  border: double 4px #00670d;
+  margin-top: 14px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 767px) {
+  div.verifyBox div.msgBox {
+    width: 70%;
+  }
+}
+
+div.verifyBox div.msgBox p {
+  color: #00d930;
+  font-size: 1.2rem;
+  padding: 6px 4px;
+  text-align: center;
+}
+
+div.verifyBox div.inVerifyBox {
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 767px) {
+  div.verifyBox div.inVerifyBox {
+    margin-top: 20px;
+    padding: 20px 0;
+    border: 6px solid #0dff00;
+    width: 60%;
+    box-sizing: border-box;
+  }
+}
+
+div.verifyBox div.inVerifyBox div.verifyTextBox {
+  margin-bottom: 30px;
+}
+
+div.verifyBox div.inVerifyBox div.verifyTextBox p {
+  margin-top: 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+div.verifyBox div.inVerifyBox div.retransmissionBox {
+  margin-bottom: 30px;
+}
+
+div.verifyBox div.inVerifyBox div.retransmissionBox p {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+div.verifyBox div.inVerifyBox div.retransmissionBox a {
+  display: block;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  padding: 4px 0;
+  background: #e7e9ec;
+  border: solid #a2a6ac 1px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: -moz-linear-gradient(top, #e7e9ec 0%, #cbcdd1);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e7e9ec), to(#cbcdd1));
+}
+
+@media only screen and (min-width: 767px) {
+  div.verifyBox div.inVerifyBox div.retransmissionBox a {
+    width: 30%;
+  }
+}
+
+div.verifyBox div.inVerifyBox div.logoutRegisterBox p {
+  text-align: center;
+}
+
+div.verifyBox div.inVerifyBox div.logoutRegisterBox form p input {
+  text-decoration: underline;
+  color: #0e00aa;
+  text-align: center;
+  font-size: 1rem;
+}
+
+div.verifyBox div.inVerifyBox div.logoutRegisterBox form p input:hover {
+  color: #756be4;
 }
 
 div.answerBox {

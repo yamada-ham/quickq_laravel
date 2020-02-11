@@ -46,6 +46,10 @@ input:focus {
     outline: none;
 }
 
+Button{
+  outline: none;
+}
+
 input[type="button"]{
   overflow: visible;
   text-transform: none;
@@ -156,6 +160,7 @@ div.createBox{
 @import 'parts/_partFooter';
 @import 'parts/_index';
 @import 'parts/_login_signup';
+@import 'parts/_verified';
 @import 'parts/_questAnswer';
 @import 'parts/_createQuest';
 @import 'parts/_userQuests';

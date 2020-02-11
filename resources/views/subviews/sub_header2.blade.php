@@ -20,12 +20,19 @@
 
 <nav class="drwerMenuBox">
   <div class="inDrwerMenuBox">
+    @if(!empty(Auth::user()->email_verified_at))
     @if(Auth::check())
-      <h2 class="greet">Hello.{{ Auth::user()->name }}さん</h2>
+      <h2 class="greet">Hello.{{Auth::user()->name}}さん</h2>
       <ul>
       <li><a href="{{action('UserAccountController@get')}}">アカウント管理</a></li>
-      <li><a href="createQuest.php">アンケートを作成する</a></li>
+      <li><a href="{{action('CreateQuestController@get')}}">アンケートを作成する</a></li>
+      <li><form action="{{ route('logout') }}" method="POST" id="logout">
+        <p><input type="submit" value="ログアウト">
+        </p>
+        @csrf
+      </form></li>
       </ul>
+    @endif
     @else
       <ul>
       <li class="login"><a href="{{ route('login') }}">ログイン</a></li>

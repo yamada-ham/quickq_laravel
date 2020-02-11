@@ -86,7 +86,7 @@ div.contentsBox{
       }
 
       div.submitBox{
-            @include media(l){
+            @include media(m){
               width:50%;
               margin-left: auto;
               margin-right: auto;
@@ -135,7 +135,7 @@ div.contentsBox{
     }
 
     div.signupBox{
-      @include media(l){
+      @include media(m){
         width:50%;
         margin-left: auto;
         margin-right: auto;
