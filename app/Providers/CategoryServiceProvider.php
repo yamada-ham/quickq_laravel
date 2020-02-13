@@ -24,6 +24,6 @@ class CategoryServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['pages.index','pages.createQuest'],'App\Http\Composers\CategoryComposer');
+        View::composer(['pages.Index','pages.createQuest'],'App\Http\Composers\CategoryComposer');
     }
 }
