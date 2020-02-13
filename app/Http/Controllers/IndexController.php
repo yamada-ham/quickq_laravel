@@ -18,6 +18,6 @@ class IndexController extends Controller
       $newLimit5 = DB::select("select code,questTitle from quests order by id desc Limit 5 ");
 
       // $user = Auth::user();
-      return view('pages.index',["popularLimit5"=>$popularLimit5,'newLimit5'=>$newLimit5]);
+      return view('pages.Index',["popularLimit5"=>$popularLimit5,'newLimit5'=>$newLimit5]);
     }
 }

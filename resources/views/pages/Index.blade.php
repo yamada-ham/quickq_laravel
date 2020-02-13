@@ -46,7 +46,6 @@
   </div>
 </div><!-- categoryBox -->
 
-
 <div class='createBox'>
   {{-- <p><a href="{{asset('createQuest')}}">+</a></p> --}}
   <p><a href="{{action('CreateQuestController@get')}}">+</a></p>
