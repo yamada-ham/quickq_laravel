@@ -5,7 +5,7 @@
       </div>
       <div class="inTitleBox">
         <h1><a href='{{action('IndexController@get')}}'>
-          {{Config('const.QUICKQ.name')}}
+          <img src="{{asset('images/quickq.png')}}" alt="{{Config('const.QUICKQ.name')}}">
         </a></h1>
       </div>
       <div class="loginInfoBox">
