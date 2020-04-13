@@ -2,36 +2,45 @@ header{
   background: #05ff00;
   div.inHeader{
     position: relative;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     height:60px;
     div.drawer{
-      position:absolute;
-      display: inline-block;
+      flex-grow: 0;
+      flex-shrink: 0;
+      // position:absolute;
+      // display: inline-block;
+      margin-left:6px;
       padding:10px 12px;
       border: solid 1px #aaaaaa;
       border-radius:5px;
       cursor:pointer;
       z-index:97;
       background:#dedede;
-      float:left;
-      position:relative;
-      top:50%;
-      left:6px;
-      transform: translate(0%, -50%);
+      // position:relative;
+      // top:50%;
+      // left:6px;
+      // transform: translate(0%, -50%);
       @include media(l){
 
       }
       img{
+        vertical-align: middle;
       }
     }
     div.inTitleBox{
-      width:100%;
+      flex-grow: 1;
+      flex-shrink: 1;
+      // width:100%;
       height:100%;
       box-sizing: border-box;
       h1{
-        width:40%;
-        height:100%;
-        padding-left:2px;
-        float:left;
+        // width:40%;
+        // height:100%;
+        // padding-left:2px;
+        // float:left;
         a{
           position:relative;
           width:100%;
@@ -47,31 +56,33 @@ header{
             line-height: 1.0;
           }
           img{
-            position:absolute;
-            top:50%;
-            left:6px;
-            transform: translate(0%, -50%);
-            width: auto;
+            // position:absolute;
+            // top:50%;
+            // left:6px;
+            // transform: translate(0%, -50%);
+            // width: auto;
             height: 40px;
             // margin-top:4px;
             // margin-bottom:2px;
             box-sizing: border-box;
-            vertical-align:bottom;
+            vertical-align:middle;
             @include media(m){
-              height: 54px;
+              height: 50px;
             }
           }
         }
       }
     }
     div.loginInfoBox{
-      position: absolute;
-      top:50%;
-      right:3px;
-      transform: translate(0%, -50%);
-      float:right;
+      // position: absolute;
+      // top:50%;
+      // right:3px;
+      // transform: translate(0%, -50%);
+      // float:right;
+      margin-left: auto;
+      margin-right:2px;
       @include media(l){
-        right:40px;
+        // right:40px;
       }
       & > p{
         float:left;

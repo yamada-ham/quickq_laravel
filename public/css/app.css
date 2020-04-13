@@ -167,36 +167,34 @@ header {
 
 header div.inHeader {
   position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
   height: 60px;
 }
 
 header div.inHeader div.drawer {
-  position: absolute;
-  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: 6px;
   padding: 10px 12px;
   border: solid 1px #aaaaaa;
   border-radius: 5px;
   cursor: pointer;
   z-index: 97;
   background: #dedede;
-  float: left;
-  position: relative;
-  top: 50%;
-  left: 6px;
-  transform: translate(0%, -50%);
+}
+
+header div.inHeader div.drawer img {
+  vertical-align: middle;
 }
 
 header div.inHeader div.inTitleBox {
-  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
   height: 100%;
   box-sizing: border-box;
-}
-
-header div.inHeader div.inTitleBox h1 {
-  width: 40%;
-  height: 100%;
-  padding-left: 2px;
-  float: left;
 }
 
 header div.inHeader div.inTitleBox h1 a {
@@ -219,34 +217,20 @@ header div.inHeader div.inTitleBox h1 a {
 }
 
 header div.inHeader div.inTitleBox h1 a img {
-  position: absolute;
-  top: 50%;
-  left: 6px;
-  transform: translate(0%, -50%);
-  width: auto;
   height: 40px;
   box-sizing: border-box;
-  vertical-align: bottom;
+  vertical-align: middle;
 }
 
 @media only screen and (min-width: 767px) {
   header div.inHeader div.inTitleBox h1 a img {
-    height: 54px;
+    height: 50px;
   }
 }
 
 header div.inHeader div.loginInfoBox {
-  position: absolute;
-  top: 50%;
-  right: 3px;
-  transform: translate(0%, -50%);
-  float: right;
-}
-
-@media only screen and (min-width: 991px) {
-  header div.inHeader div.loginInfoBox {
-    right: 40px;
-  }
+  margin-left: auto;
+  margin-right: 2px;
 }
 
 header div.inHeader div.loginInfoBox > p {
