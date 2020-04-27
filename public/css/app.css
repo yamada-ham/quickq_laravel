@@ -123,18 +123,12 @@ div.createBox p a {
   }
 }
 
-div.createBox p a i {
+div.createBox p a img {
   position: absolute;
   top: 50%;
   left: 50%;
-  font-size: 2rem;
+  width: 70%;
   transform: translate(-50%, -50%);
-}
-
-@media only screen and (min-width: 991px) {
-  div.createBox p a i {
-    font-size: 2.7rem;
-  }
 }
 
 #app {

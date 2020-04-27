@@ -137,15 +137,12 @@ div.createBox{
         width: 70px;
         height: 70px;
       }
-      i{
+      img{
         position:absolute;
         top:50%;
         left:50%;
-        font-size:2rem;
+        width:70%;
         transform: translate(-50%,-50%);
-        @include media(l){
-          font-size:2.7rem;
-        }
       }
     }
   }
