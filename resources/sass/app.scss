@@ -127,7 +127,7 @@ div.createBox{
   p{
     a{
       position:relative;
-      display:block;
+      display:inline-block;
       text-decoration: none;
       background: #4aff00;
       border-radius: 50px;
@@ -138,10 +138,11 @@ div.createBox{
         height: 70px;
       }
       img{
+        display:block;
         position:absolute;
         top:50%;
         left:50%;
-        width:70%;
+        max-width:70%;
         transform: translate(-50%,-50%);
       }
     }
