@@ -95,29 +95,41 @@ select {
 div.createBox {
   position: fixed;
   bottom: 10px;
-  right: 12px;
+  right: 8px;
   z-index: 99;
 }
 
+@media only screen and (min-width: 991px) {
+  div.createBox {
+    bottom: 14px;
+    right: 18px;
+  }
+}
+
 div.createBox p a {
-  display: inline-block;
+  position: relative;
+  display: block;
   text-decoration: none;
-  font-size: 3.4rem;
   background: #4aff00;
   border-radius: 50px;
   width: 50px;
   height: 50px;
-  text-align: center;
-  line-height: 44px;
+  font-size: 2rem;
 }
 
 @media only screen and (min-width: 991px) {
   div.createBox p a {
-    font-size: 4.2rem;
     width: 70px;
     height: 70px;
-    line-height: 62px;
+    font-size: 2.7rem;
   }
+}
+
+div.createBox p a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #app {
