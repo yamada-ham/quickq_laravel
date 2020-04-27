@@ -48,6 +48,6 @@
 
 <div class='createBox'>
   {{-- <p><a href="{{asset('createQuest')}}">+</a></p> --}}
-  <p><a href="{{action('CreateQuestController@get')}}"><i class="fas fa-plus"></i></a></p>
+  <p><a href="{{action('CreateQuestController@get')}}"><img src="{{asset('images/icon/plus.png')}}" alt="プラス"></a></p>
 </div>
 @endsection
