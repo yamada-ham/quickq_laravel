@@ -6,8 +6,8 @@
   </div>
 </div>
 <ul class="questLimitBox">
-  <li class="newListBox">
-    <div class="inNewListBox">
+  <li class="listBox newListBox">
+    <div class="inListBox inNewListBox">
       <div><h2>最新アンケート</h2></div>
       <ul>
         @foreach($newLimit5 as $quest)
@@ -16,8 +16,8 @@
       </ul>
     </div>
   </li><!-- newListBox -->
-  <li class="newListBox">
-    <div class="inNewListBox">
+  <li class="listBox popularListBox">
+    <div class="inListBox inPpopularListBox">
       <div><h2>人気アンケート</h2></div>
       <ul>
         @foreach($popularLimit5 as $quest)
@@ -47,7 +47,7 @@
 </div><!-- categoryBox -->
 
 <div class='createBox'>
-  {{-- <p><a href="{{asset('createQuest')}}">+</a></p> --}}
+  {{-- <p><a href="{{asset('createQuest')}}"><span>+</span></a></p> --}}
   <p><a href="{{action('CreateQuestController@get')}}"><img src="{{asset('images/icon/plus.png')}}" alt="プラス"></a></p>
 </div>
 @endsection

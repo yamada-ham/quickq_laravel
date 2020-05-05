@@ -26,61 +26,123 @@ ul.questLimitBox{
         justify-content: center;
         margin-bottom:4px;
       }
-  li.newListBox{
-    @include media(m) {
-        width:49%;
-      }
-    div.inNewListBox{
-      margin-left: 4px;
-      margin-right: 4px;
-      margin-bottom:10px;
-      border:solid rgb(255, 209, 171) 6px;
-      border-radius: 20px;
-      @include media(l){
-        padding:8px;
-      }
-      div{
-        h2{
-          display:inline-block;
-          position: relative;
-          background: rgb(252, 164, 164);
-          color: black;
-          padding:4px 8px;
-          margin-top:4px;
-          margin-bottom:14px;
-          margin-left:4px;
-          &:before{
-            position: absolute;
-            content: '';
-            top: 100%;
-            left: 0;
-            border: none;
-            border-bottom: solid 9px transparent;
-            border-right: solid 15px rgb(149, 158, 155);
+  li{
+    &.newListBox{
+      @include media(m) {
+          width:49%;
+        }
+      div.inNewListBox{
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom:10px;
+        border:solid rgb(255, 209, 171) 6px;
+        border-radius: 20px;
+        @include media(l){
+          padding:8px;
+        }
+        div{
+          h2{
+            display:inline-block;
+            position: relative;
+            background: rgb(252, 164, 164);
+            color: black;
+            padding:4px 8px;
+            margin-top:4px;
+            margin-bottom:14px;
+            margin-left:4px;
+            &:before{
+              position: absolute;
+              content: '';
+              top: 100%;
+              left: 0;
+              border: none;
+              border-bottom: solid 9px transparent;
+              border-right: solid 15px rgb(252, 164, 164);
+            }
+          }
+        }
+        ul{
+          margin:2px 8px;
+          li{
+            border-bottom:solid 1px #d0d0d0;
+            margin-bottom:6px;
+            a{
+              display: block;
+              text-decoration: none;
+              color:#0e00aa;
+              &:hover{
+                color:#756be4;
+              }
+            }
           }
         }
       }
-      ul{
-        margin:2px 8px;
-        li{
-          border-bottom:solid 1px #d0d0d0;
-          margin-bottom:6px;
-          a{
-            display: block;
-            text-decoration: none;
-            color:#0e00aa;
-            &:hover{
-              color:#756be4;
+      &:nth-child(2){
+        div.inNewListBox{
+          div{
+            h2{
+              background: rgb(148, 204, 255);
             }
           }
         }
       }
     }
-    &:nth-child(2){
-      div.inNewListBox{
+    &.popularListBox{
+      @include media(m) {
+          width:49%;
+        }
+      div.inPpopularListBox{
+        margin-left: 4px;
+        margin-right: 4px;
+        margin-bottom:10px;
+        border:solid rgb(255, 209, 171) 6px;
+        border-radius: 20px;
+        @include media(l){
+          padding:8px;
+        }
         div{
           h2{
-            background: rgb(148, 204, 255);
+            display:inline-block;
+            position: relative;
+            background: rgb(179, 164, 252);
+            color: black;
+            padding:4px 8px;
+            margin-top:4px;
+            margin-bottom:14px;
+            margin-left:4px;
+            &:before{
+              position: absolute;
+              content: '';
+              top: 100%;
+              left: 0;
+              border: none;
+              border-bottom: solid 9px transparent;
+              border-right: solid 15px rgb(174, 164, 252);
+            }
+          }
+        }
+        ul{
+          margin:2px 8px;
+          li{
+            border-bottom:solid 1px #d0d0d0;
+            margin-bottom:6px;
+            a{
+              display: block;
+              text-decoration: none;
+              color:#0e00aa;
+              &:hover{
+                color:#756be4;
+              }
+            }
+          }
+        }
+      }
+      &:nth-child(2){
+        div.inNewListBox{
+          div{
+            h2{
+              background: rgb(148, 204, 255);
+            }
           }
         }
       }
