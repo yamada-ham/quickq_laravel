@@ -403,7 +403,7 @@ div.topImgBox {
 div.topImgBox div.inTopImgBox {
   background: url(/images/quickq_top2.jpg?b9eea565c3d52267dea4256b525417ff);
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-size: cover;
   background-position: center center;
   position: relative;
@@ -411,7 +411,6 @@ div.topImgBox div.inTopImgBox {
 
 div.topImgBox div.inTopImgBox img {
   width: 100%;
-  max-height: 500px;
   position: absolute;
   top: 50%;
   left: 50%;
