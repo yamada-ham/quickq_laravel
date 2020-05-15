@@ -175,6 +175,9 @@ div.createBox p a img {
 
 header {
   background: #05ff00;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
 }
 
 header div.inHeader {
