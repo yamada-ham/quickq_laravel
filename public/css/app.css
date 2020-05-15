@@ -452,55 +452,77 @@ div.topImgBox div.inTopImgBox {
   position: relative;
 }
 
-div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox {
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox {
   position: absolute;
-  width: 90%;
-  top: 46%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  top: 46%;
 }
 
 @media only screen and (min-width: 991px) {
-  div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox {
     left: 8%;
     transform: translate(0, -50%);
   }
 }
 
-div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox {
+  float: left;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
   color: #fff;
   text-shadow: 0 0 14px #4e4e4e;
   font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 767px) {
-  div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
     font-size: 3.2rem;
   }
 }
 
 @media only screen and (min-width: 1199px) {
-  div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
     font-size: 3.6rem;
   }
 }
 
-div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox p {
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox p {
   color: #fff;
   text-shadow: 0 0 4px #4e4e4e;
   font-size: 1.1rem;
 }
 
 @media only screen and (min-width: 767px) {
-  div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox p {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox p {
     font-size: 1.2rem;
   }
 }
 
 @media only screen and (min-width: 1199px) {
-  div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox p {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox p {
     font-size: 1.3rem;
   }
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox {
+  float: right;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox {
+  background: rgba(255, 255, 255, 0.6);
 }
 
 @media only screen and (min-width: 767px) {
