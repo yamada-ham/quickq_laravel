@@ -248,7 +248,7 @@ header div.inHeader div.menuBox div.inMenuBox nav ul {
 
 header div.inHeader div.menuBox div.inMenuBox nav ul li p a {
   padding: 4px 20px;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 header div.inHeader div.menuBox div.inMenuBox nav ul li p a:hover {
@@ -256,40 +256,57 @@ header div.inHeader div.menuBox div.inMenuBox nav ul li p a:hover {
 }
 
 header div.inHeader div.loginInfoBox {
+  margin-right: 8px;
   margin-left: auto;
-  margin-right: 2px;
 }
 
-header div.inHeader div.loginInfoBox > p {
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.loginInfoBox {
+    margin-right: 14px;
+  }
+}
+
+header div.inHeader div.loginInfoBox div.inLoginInfoBox {
+  background: #7ea371;
+  border-radius: 6px;
+}
+
+header div.inHeader div.loginInfoBox div.inLoginInfoBox:hover {
+  background: rgba(126, 163, 113, 0.9);
+}
+
+header div.inHeader div.loginInfoBox div.inLoginInfoBox:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+header div.inHeader div.loginInfoBox div.inLoginInfoBox > p {
   float: left;
 }
 
-header div.inHeader div.loginInfoBox > p a {
+header div.inHeader div.loginInfoBox div.inLoginInfoBox > p a {
   display: block;
-  color: #ffffff;
-  font-weight: bold;
+  color: #fff;
   text-decoration: none;
   box-sizing: border-box;
   padding: 6px;
   border: 1px solid rgba(0, 0, 0, 0);
+  font-size: 1.1rem;
 }
 
 @media only screen and (min-width: 991px) {
-  header div.inHeader div.loginInfoBox > p a {
-    padding: 6px 8px 6px 8px;
+  header div.inHeader div.loginInfoBox div.inLoginInfoBox > p a {
+    padding: 8px;
   }
 }
 
-header div.inHeader div.loginInfoBox > p a:hover {
-  border: 1px dotted #ffffff;
-}
-
-header div.inHeader div.loginInfoBox > p a span.greet {
+header div.inHeader div.loginInfoBox div.inLoginInfoBox > p a span.greet {
   display: none;
 }
 
 @media only screen and (min-width: 991px) {
-  header div.inHeader div.loginInfoBox > p a span.greet {
+  header div.inHeader div.loginInfoBox div.inLoginInfoBox > p a span.greet {
     display: block;
     font-size: 0.8rem;
     color: #ffffff;
@@ -297,15 +314,15 @@ header div.inHeader div.loginInfoBox > p a span.greet {
   }
 }
 
-header div.inHeader div.loginInfoBox > p a span.account {
+header div.inHeader div.loginInfoBox div.inLoginInfoBox > p a span.account {
   color: #ffffff;
   font-size: 0.9rem;
   text-align: center;
 }
 
 @media only screen and (min-width: 991px) {
-  header div.inHeader div.loginInfoBox > p a span.account {
-    font-size: 1rem;
+  header div.inHeader div.loginInfoBox div.inLoginInfoBox > p a span.account {
+    font-size: 1.1rem;
     display: block;
     line-height: 1;
   }
@@ -437,15 +454,23 @@ div.topImgBox div.inTopImgBox {
 
 div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox {
   position: absolute;
+  width: 90%;
   top: 46%;
-  left: 8%;
-  transform: translate(0, -50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (min-width: 991px) {
+  div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox {
+    left: 8%;
+    transform: translate(0, -50%);
+  }
 }
 
 div.topImgBox div.inTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
   color: #fff;
   text-shadow: 0 0 14px #4e4e4e;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 @media only screen and (min-width: 767px) {

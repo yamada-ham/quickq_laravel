@@ -29,13 +29,19 @@
         </div>
       </div>
       <div class="loginInfoBox">
+      <div class="inLoginInfoBox">
         @if(!empty(Auth::user()->email_verified_at))
           @if(Auth::check())
-          <p><a href={{action('UserAccountController@get')}}><span class="greet">{{Auth::user()->name}}</span><span class="account">Myアカウント</span></a></p>
+          <p><a href={{action('UserAccountController@get')}}>
+            {{-- <span class="greet">{{Auth::user()->name}}</span> --}}
+            {{-- <span class="account">Myアカウント</span> --}}
+            Myアカウント
+          </a></p>
           @endif
         @else
           <p><a href="{{route('login')}}">ログイン</a></p>
         @endif
+      </div>
       </div>
   </div><!-- inHeader -->
 </header>

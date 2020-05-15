@@ -95,7 +95,7 @@ header{
               p{
                 a{
                   padding:4px 20px;
-                  font-size:1rem;
+                  font-size:0.9rem;
                   &:hover{
                     color:#00550b;
                   }
@@ -112,45 +112,53 @@ header{
       // right:3px;
       // transform: translate(0%, -50%);
       // float:right;
+      margin-right:8px;
       margin-left: auto;
-      margin-right:2px;
       @include media(l){
-        // right:40px;
+        margin-right:14px;
       }
-      & > p{
-        float:left;
-        a{
-          display: block;
-          color:#ffffff;
-          font-weight:bold;
-          text-decoration: none;
-          box-sizing: border-box;
-          padding:6px;
-          border: 1px solid rgba(0,0,0,0);
-          @include media(l){
-            padding:6px 8px 6px 8px;
-          }
-          &:hover{
-            border:1px dotted #ffffff;
-          }
-          span{
-            &.greet{
-              display:none;
-              @include media(l){
-                display:block;
-                font-size:0.8rem;
-                color: #ffffff;
-                line-height: 1.0;
-              }
+      div.inLoginInfoBox{
+        background: #7ea371;
+        border-radius: 6px;
+        &:hover{
+          background:rgba(126, 163, 113, 0.9);
+        }
+        &:after{
+          @include clear;
+        }
+        & > p{
+          float:left;
+          a{
+            display: block;
+            color:#fff;
+            // font-weight:bold;
+            text-decoration: none;
+            box-sizing: border-box;
+            padding:6px;
+            border: 1px solid rgba(0,0,0,0);
+            font-size: 1.1rem;
+            @include media(l){
+              padding:8px;
             }
-            &.account{
-              color:#ffffff;
-              font-size:0.9rem;
-              text-align: center;
-              @include media(l){
-                font-size:1.0rem;
-                display: block;
-                line-height: 1.0;
+            span{
+              &.greet{
+                display:none;
+                @include media(l){
+                  display:block;
+                  font-size:0.8rem;
+                  color: #ffffff;
+                  line-height: 1.0;
+                }
+              }
+              &.account{
+                color:#ffffff;
+                font-size:0.9rem;
+                text-align: center;
+                @include media(l){
+                  font-size:1.1rem;
+                  display: block;
+                  line-height: 1.0;
+                }
               }
             }
           }
