@@ -76,6 +76,36 @@ header{
         }
       }
     }
+
+    div.menuBox{
+      flex-grow: 1;
+      flex-shrink: 1;
+      display:none;
+      @include media(l){
+        display:block;
+      }
+      div.inMenuBox{
+        nav{
+          ul{
+            display:flex;
+            flex-wrap: nowrap;
+            justify-content:center;
+            align-items: center;
+            li{
+              p{
+                a{
+                  padding:4px 20px;
+                  font-size:1rem;
+                  &:hover{
+                    color:#00550b;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
     div.loginInfoBox{
       // position: absolute;
       // top:50%;

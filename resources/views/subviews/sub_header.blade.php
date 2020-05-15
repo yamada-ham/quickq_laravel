@@ -8,6 +8,26 @@
           <img src="{{asset('images/quickq.png')}}" alt="{{Config('const.QUICKQ.name')}}">
         </a></h1>
       </div>
+      <div class="menuBox">
+        <div class="inMenuBox">
+          <nav>
+            <ul>
+              <li>
+                <p><a href="#">サービズの概要</a></p>
+              </li>
+              <li>
+                <p><a href="#">料金</a></p>
+              </li>
+              <li>
+                <p><a href="#">よくあるご質問</a></p>
+              </li>
+              <li>
+                <p><a href="#">お問い合わせ</a></p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
       <div class="loginInfoBox">
         @if(!empty(Auth::user()->email_verified_at))
           @if(Auth::check())
@@ -16,7 +36,6 @@
         @else
           <p><a href="{{route('login')}}">ログイン</a></p>
         @endif
-
       </div>
   </div><!-- inHeader -->
 </header>

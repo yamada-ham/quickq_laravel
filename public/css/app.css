@@ -227,6 +227,34 @@ header div.inHeader div.inTitleBox h1 a img {
   }
 }
 
+header div.inHeader div.menuBox {
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: none;
+}
+
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.menuBox {
+    display: block;
+  }
+}
+
+header div.inHeader div.menuBox div.inMenuBox nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+header div.inHeader div.menuBox div.inMenuBox nav ul li p a {
+  padding: 4px 20px;
+  font-size: 1rem;
+}
+
+header div.inHeader div.menuBox div.inMenuBox nav ul li p a:hover {
+  color: #00550b;
+}
+
 header div.inHeader div.loginInfoBox {
   margin-left: auto;
   margin-right: 2px;
