@@ -174,7 +174,7 @@ div.createBox p a img {
 }
 
 header {
-  background: #05ff00;
+  background: #70da5e;
   width: 100%;
   position: fixed;
   z-index: 10;
@@ -194,11 +194,9 @@ header div.inHeader div.drawer {
   flex-shrink: 0;
   margin-left: 6px;
   padding: 10px 12px;
-  border: solid 1px #aaaaaa;
   border-radius: 5px;
   cursor: pointer;
   z-index: 97;
-  background: #dedede;
 }
 
 header div.inHeader div.drawer img {
