@@ -2,7 +2,13 @@
 @section('content')
 <div class="topImgBox">
   <div class="inTopImgBox">
-    <img src = "{{asset('images/quickq_title.png')}}">
+    {{-- <img src = "{{asset('images/quickq_title.png')}}"> --}}
+    <div class="catchCopyInTopImgBox">
+      <div class="inCatchCopyInTopImgBox">
+        <h1>お手軽なアンケート収集</h1>
+        <p>QuickQ(クイックキュー)は、<br />すばやく人々の意見を集めるために作られました。<br />誰でも簡単にアンケートを作成し、回答することができます。</p>
+      </div>
+    </div>
   </div>
 </div>
 <ul class="questLimitBox">
