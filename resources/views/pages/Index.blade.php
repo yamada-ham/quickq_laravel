@@ -71,6 +71,35 @@
     </div>
   </div>
 </div>
+
+<div class="promotionBox">
+<div class="inPromotionBox">
+  <div class="simpleFlowBox">
+  <div class="inSimpleFlowBox">
+    <div class="iconBox">
+      <div class="inIconBox">
+        <i class="fas fa-edit"></i>
+        <div class="subTextBox"><p><span>作成</s</p></div>
+      </div>
+    </div>
+    <div class="iconBox">
+      <div class="inIconBox">
+        <i class="fas fa-users"></i>
+        <div class="subTextBox"><p><span>収集</s</p></div>
+      </div>
+    </div>
+    <div class="iconBox">
+      <div class="inIconBox">
+        <i class="fas fa-chart-pie"></i>
+        <div class="subTextBox"><p><span>分析</s</p></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+</div>
+
+
 <ul class="questLimitBox">
   <li class="listBox newListBox">
     <div class="inListBox inNewListBox">

@@ -1,7 +1,5 @@
 div.topImgBox{
-  margin-bottom:8px;
   div.inTopImgBox{
-    // background: url("../images/quickq_top2.jpg");
     // width:100%;
     // height:680px;
     // background-size: cover;
@@ -16,6 +14,7 @@ div.topImgBox{
       width: 100%;
       height: 740px;
       object-fit: cover;
+      vertical-align:top;
       // max-height:500px;
       // position: absolute;
       // top:50%;
@@ -183,11 +182,50 @@ div.topImgBox{
     }
   }
 }
+
+div.promotionBox{
+  background: rgba(255, 255, 255, 0.9);
+  div.inPromotionBox{
+    div.simpleFlowBox{
+      div.inSimpleFlowBox{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content:space-around;
+        align-items: center;
+        width:80%;
+        margin-left: auto;
+        margin-right: auto;
+        div.iconBox{
+          width:33%;
+          div.inIconBox{
+            color:#45f261;
+            i{
+              display:block;
+              font-size:7.5rem;
+              text-align: center;
+            }
+            div.subTextBox{
+              p{
+                text-align: center;
+                font-size:2rem;
+                span{
+                  border-bottom:2px solid #45f261;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 ul.questLimitBox{
+  background: #fff;
     @include media(m) {
         display: flex;
         justify-content: center;
-        margin-bottom:4px;
+        padding-bottom:4px;
       }
   li{
     &.newListBox{
@@ -251,6 +289,7 @@ ul.questLimitBox{
       }
     }
     &.popularListBox{
+      background: #fff;
       @include media(m) {
           width:49%;
         }
@@ -328,13 +367,13 @@ div.categoryBox{
         @include media(m){
           float: left;
           width:33%;
-          margin-bottom:4px;
+          padding-bottom:4px;
         }
         section{
           h1{
             background-color: #69b633;
             border-bottom: solid 1px #59ffdc;
-            margin-bottom: 1px;
+            // margin-bottom: 1px;
             padding: 10px;
             color: #FFF;
             cursor: pointer;
