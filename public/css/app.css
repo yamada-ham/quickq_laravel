@@ -476,6 +476,7 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox {
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox {
+  width: 100%;
   position: absolute;
   top: 8%;
 }
