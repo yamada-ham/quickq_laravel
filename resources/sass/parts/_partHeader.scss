@@ -1,10 +1,13 @@
 header{
-  background: #70da5e;
-  width:100%;
-  position:fixed;
-  z-index:10;
+  position: relative;
+  margin-bottom:60px;
   div.inHeader{
-    position: relative;
+    background: #fff;
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:10;
+    // position: relative;
     display:flex;
     flex-wrap: nowrap;
     justify-content: space-between;
@@ -13,21 +16,16 @@ header{
     div.drawer{
       flex-grow: 0;
       flex-shrink: 0;
-      // position:absolute;
-      // display: inline-block;
+
       margin-left:6px;
       padding:10px 12px;
       // border: solid 1px #aaaaaa;
       border-radius:5px;
       cursor:pointer;
       z-index:97;
-      // background:#dedede;
-      // position:relative;
-      // top:50%;
-      // left:6px;
-      // transform: translate(0%, -50%);
+      font-size:1.1rem;
       @include media(l){
-
+        font-size:1.8rem;
       }
       img{
         vertical-align: middle;

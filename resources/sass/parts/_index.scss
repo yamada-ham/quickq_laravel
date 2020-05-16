@@ -22,20 +22,37 @@ div.topImgBox{
       position:relative;
       width:100%;
       height:100%;
+      @include media(l){
+        width:92%;
+        margin-left: auto;
+        margin-right: auto;
+      }
       div.inContentsInTopImgBox{
         position:absolute;
-        left:50%;
-        top:46%;
-        // transform: translate(-50%,-50%);
+        top:8%;
         @include media(l){
-          left:8%;
+          display:flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          align-items: center;
+          top:40%;
+          width:100%;
           transform: translate(0,-50%);
         }
         &:after{
           @include clear;
         }
         div.catchCopyInTopImgBox{
-          float:left;
+          width:90%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-bottom:40px;
+          @include media(l){
+            // float:left;
+            margin-bottom:0px;
+            height:100%;
+            width:70%;
+          }
           div.inCatchCopyInTopImgBox{
             h1{
               color:#fff;
@@ -62,12 +79,85 @@ div.topImgBox{
           }
         }
         div.signUpBoxInTopImgBox{
-          float:right;
+          width:90%;
+          margin-left: auto;
+          margin-right: auto;
+          @include media(l){
+            // float:right;
+            width:30%;
+          }
           div.inSignUpBoxInTopImgBox{
             background:rgba(255, 255, 255, 0.6);
-            p{
-              a{
+            padding:20px 30px;
+            @include media(l){
+              font-size:1.3rem;
+              padding:30px 40px;
 
+            }
+            form{
+              div.inputTextBox{
+                margin-bottom:30px;
+                p{
+                  &.typeText{
+                    input{
+                      font-size:1rem;
+                      box-sizing: border-box;
+                      padding: 5px;
+                      width:100%;
+                      letter-spacing: 1px;
+                      border: 1px solid #1b2538;
+                      border-radius: 4px;
+                      &:focus{
+                        border: 1px solid #da3c41;
+                        outline: none;
+                        box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+                      }
+                    }
+                  }
+                }
+              }
+              div.inputPasswordBox{
+                margin-bottom:30px;
+                p.typePassword{
+                  input{
+                    font-size:1rem;
+                    box-sizing: border-box;
+                    padding: 5px;
+                    width:100%;
+                    letter-spacing: 1px;
+                    border: 1px solid #1b2538;
+                    border-radius: 4px;
+                    &:focus{
+                      border: 1px solid #da3c41;
+                      outline: none;
+                      box-shadow: 0 0 5px 1px rgba(218,60,65, .5);
+                    }
+                  }
+                }
+              }
+              div.submitBox{
+                p.inSubmitBox{
+                  input{
+                    display : inline-block;
+                    border-radius : 5%;
+                    font-size : 1rem;
+                    text-align: center;
+                    cursor : pointer;
+                    padding:4px 0;
+                    border-bottom: solid 2px #d27d00;
+                    background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+                    box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+                    color : #000000;
+                    opacity : 0.9;
+                    width:100%;
+                    &:hover{
+                      opacity: 1;
+                    }
+                    &:active{
+                      box-shadow: inset 0 3px 5px rgba(0, 0, 0, .2);
+                    }
+                  }
+                }
               }
             }
           }

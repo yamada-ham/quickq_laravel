@@ -174,14 +174,16 @@ div.createBox p a img {
 }
 
 header {
-  background: #70da5e;
-  width: 100%;
-  position: fixed;
-  z-index: 10;
+  position: relative;
+  margin-bottom: 60px;
 }
 
 header div.inHeader {
-  position: relative;
+  background: #fff;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -197,6 +199,13 @@ header div.inHeader div.drawer {
   border-radius: 5px;
   cursor: pointer;
   z-index: 97;
+  font-size: 1.1rem;
+}
+
+@media only screen and (min-width: 991px) {
+  header div.inHeader div.drawer {
+    font-size: 1.8rem;
+  }
 }
 
 header div.inHeader div.drawer img {
@@ -458,15 +467,27 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox {
   height: 100%;
 }
 
+@media only screen and (min-width: 991px) {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox {
   position: absolute;
-  left: 50%;
-  top: 46%;
+  top: 8%;
 }
 
 @media only screen and (min-width: 991px) {
   div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox {
-    left: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    top: 40%;
+    width: 100%;
     transform: translate(0, -50%);
   }
 }
@@ -478,7 +499,18 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox:
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox {
-  float: left;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+}
+
+@media only screen and (min-width: 991px) {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox {
+    margin-bottom: 0px;
+    height: 100%;
+    width: 70%;
+  }
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.catchCopyInTopImgBox div.inCatchCopyInTopImgBox h1 {
@@ -518,11 +550,90 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox {
-  float: right;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 991px) {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox {
+    width: 30%;
+  }
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox {
   background: rgba(255, 255, 255, 0.6);
+  padding: 20px 30px;
+}
+
+@media only screen and (min-width: 991px) {
+  div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox {
+    font-size: 1.3rem;
+    padding: 30px 40px;
+  }
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputTextBox {
+  margin-bottom: 30px;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputTextBox p.typeText input {
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  letter-spacing: 1px;
+  border: 1px solid #1b2538;
+  border-radius: 4px;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputTextBox p.typeText input:focus {
+  border: 1px solid #da3c41;
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputPasswordBox {
+  margin-bottom: 30px;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputPasswordBox p.typePassword input {
+  font-size: 1rem;
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  letter-spacing: 1px;
+  border: 1px solid #1b2538;
+  border-radius: 4px;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputPasswordBox p.typePassword input:focus {
+  border: 1px solid #da3c41;
+  outline: none;
+  box-shadow: 0 0 5px 1px rgba(218, 60, 65, 0.5);
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.submitBox p.inSubmitBox input {
+  display: inline-block;
+  border-radius: 5%;
+  font-size: 1rem;
+  text-align: center;
+  cursor: pointer;
+  padding: 4px 0;
+  border-bottom: solid 2px #d27d00;
+  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  color: #000000;
+  opacity: 0.9;
+  width: 100%;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.submitBox p.inSubmitBox input:hover {
+  opacity: 1;
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.submitBox p.inSubmitBox input:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 @media only screen and (min-width: 767px) {

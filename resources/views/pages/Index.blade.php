@@ -16,9 +16,8 @@
         <form method="POST" action="{{ route('register') }}">
           @csrf
           <div class="inputTextBox">
-            <label for="name" class="emailLabel">ユーザー名</label>
-            <p class="emailText">
-              <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="Q田Q太郎" required autofocus>
+            <p class="typeText">
+              <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" placeholder="ユーザー名" required autofocus>
             @if ($errors->has('name'))
               <div class="errBox"><p>
               {{ $errors->first('name') }}
@@ -27,9 +26,8 @@
           </div>
 
           <div class="inputTextBox">
-            <label for="email" class="emailLabel">email:</label>
             <p class="typeText">
-              <input id="email" type="email"  name="email" value="{{ old('email') }}" required>
+              <input id="email" type="email"  name="email" value="{{ old('email') }}" placeholder="メールアドレス" required>
             </p>
             @if ($errors->has('email'))
               <div class="errBox"><p>
@@ -39,9 +37,8 @@
           </div>
 
           <div class="inputPasswordBox">
-            <label for="password" class="passwordlLabel">password:</label>
             <p class="typePassword">
-              <input type="password" name="password" placeholder="•••••••••">
+              <input type="password" name="password" placeholder="パスワード">
             </p>
             @if ($errors->has('password'))
               <div class="errBox"><p>
@@ -52,9 +49,8 @@
           </div>
 
           <div class="inputPasswordBox">
-            <label for="password-confirm" class="passwordConfirmlLabel">password(確認のためもう一度):</label>
             <p class="typePassword">
-              <input id="password-confirm" type="password" name="password_confirmation" placeholder="•••••••••" required>
+              <input id="password-confirm" type="password" name="password_confirmation" placeholder="パスワード(確認)" required>
             </p>
             @if ($errors->has('password_confirmation'))
               <div class="errBox"><p>
