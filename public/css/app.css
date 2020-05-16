@@ -455,10 +455,16 @@ div.topImgBox {
 div.topImgBox div.inTopImgBox {
   background: url(/images/quickq_top2.jpg?b9eea565c3d52267dea4256b525417ff);
   width: 100%;
-  height: 100vh;
+  height: 680px;
   background-size: cover;
   background-position: center center;
   position: relative;
+}
+
+@media only screen and (min-width: 767px) {
+  div.topImgBox div.inTopImgBox {
+    height: 100vh;
+  }
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox {
