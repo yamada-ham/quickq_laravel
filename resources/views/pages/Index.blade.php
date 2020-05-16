@@ -2,7 +2,7 @@
 @section('content')
 <div class="topImgBox">
   <div class="inTopImgBox">
-    {{-- <img src = "{{asset('images/quickq_title.png')}}"> --}}
+    <img src = "{{asset('images/quickq_top2.jpg')}}">
     <div class="contentsInTopImgBox">
     <div class="inContentsInTopImgBox">
       <div class="catchCopyInTopImgBox">

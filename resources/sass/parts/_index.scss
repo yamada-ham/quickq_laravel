@@ -1,28 +1,35 @@
 div.topImgBox{
   margin-bottom:8px;
   div.inTopImgBox{
-    background: url("../images/quickq_top2.jpg");
-    width:100%;
-    height:680px;
-    background-size: cover;
-    background-position: center center;
+    // background: url("../images/quickq_top2.jpg");
+    // width:100%;
+    // height:680px;
+    // background-size: cover;
+    // background-position: center center;
     position: relative;
-    @include media(m){
-      height:100vh;
-    }
-    // img{
-    //   width:100%;
-    //   // max-height:500px;
-    //   position: absolute;
-    //   top:50%;
-    //   left:50%;
-    //   transform: translate(-50%,-50%);
-    //   @include media(l){
-    //     width:50%;
-    //   }
+    // @include media(m){
+    //   height:100vh;
     // }
+    width:100%;
+    height:100%;
+    img{
+      width: 100%;
+      height: 740px;
+      object-fit: cover;
+      // max-height:500px;
+      // position: absolute;
+      // top:50%;
+      // left:50%;
+      // transform: translate(-50%,-50%);
+      // @include media(l){
+      //   width:50%;
+      // }
+    }
     div.contentsInTopImgBox{
-      position:relative;
+      position:absolute;
+      top: 50%;
+      left:50%;
+      transform: translate(-50%,-50%);
       width:100%;
       height:100%;
       @include media(l){

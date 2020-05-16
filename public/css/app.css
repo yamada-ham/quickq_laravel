@@ -453,22 +453,23 @@ div.topImgBox {
 }
 
 div.topImgBox div.inTopImgBox {
-  background: url(/images/quickq_top2.jpg?b9eea565c3d52267dea4256b525417ff);
-  width: 100%;
-  height: 680px;
-  background-size: cover;
-  background-position: center center;
   position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-@media only screen and (min-width: 767px) {
-  div.topImgBox div.inTopImgBox {
-    height: 100vh;
-  }
+div.topImgBox div.inTopImgBox img {
+  width: 100%;
+  height: 740px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: 100%;
 }
