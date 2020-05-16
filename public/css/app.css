@@ -570,6 +570,7 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox {
   background: rgba(255, 255, 255, 0.6);
+  border-radius: 8px;
   padding: 20px 30px;
 }
 
@@ -578,6 +579,13 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
     font-size: 1.3rem;
     padding: 30px 40px;
   }
+}
+
+div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox p {
+  font-size: 1rem;
+  color: #f21b1b;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox div.signUpBoxInTopImgBox div.inSignUpBoxInTopImgBox form div.inputTextBox {

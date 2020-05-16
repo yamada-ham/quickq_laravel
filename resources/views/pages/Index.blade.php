@@ -13,6 +13,7 @@
       </div>
       <div class="signUpBoxInTopImgBox">
       <div class="inSignUpBoxInTopImgBox">
+        <p>[会員登録]はこちらから</p>
         <form method="POST" action="{{ route('register') }}">
           @csrf
           <div class="inputTextBox">
