@@ -219,6 +219,66 @@ div.promotionBox{
         }
       }
     }
+    div.inductionBox{
+      margin-top:20px;
+      div.inInductionBox{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content:space-around;
+        align-items: center;
+        width:70%;
+        margin-left: auto;
+        margin-right: auto;
+        div.howToUseLinkBox{
+          width:45%;
+          background:red;
+          padding:14px 4px;
+          border-radius: 8px;
+          position: relative;
+          div.inHowToUseLinkBox{
+            p{
+              a{
+                display: block;
+                text-align: center;
+                font-size:1.2rem;
+              }
+            }
+          }
+          i{
+            position:absolute;
+            top:50%;
+            right:5%;
+            transform: translate(0,-50%);
+            font-size:1.3rem;
+            color:#fff;
+          }
+        }
+        div.signUpLinkBox{
+          width:45%;
+          background: blue;
+          padding:14px 4px;
+          border-radius: 8px;
+          position:relative;
+          div.inSignUpLinkBox{
+            p{
+              a{
+                display: block;
+                text-align: center;
+                font-size:1.2rem;
+              }
+            }
+          }
+          i{
+            position:absolute;
+            top:50%;
+            right:5%;
+            transform: translate(0,-50%);
+            font-size:1.3rem;
+            color:#fff;
+          }
+        }
+      }
+    }
   }
 }
 

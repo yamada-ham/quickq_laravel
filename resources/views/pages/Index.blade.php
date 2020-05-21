@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.top')
 @section('content')
 <div class="topImgBox">
   <div class="inTopImgBox">
@@ -78,7 +78,7 @@
   <div class="inSimpleFlowBox">
     <div class="iconBox">
       <div class="inIconBox">
-        <i class="fas fa-edit"></i>
+        <i class="fas fa-hammer"></i>
         <div class="subTextBox"><p><span>作成</s</p></div>
       </div>
     </div>
@@ -95,6 +95,22 @@
       </div>
     </div>
   </div>
+  </div>
+  <div class="inductionBox">
+    <div class="inInductionBox">
+      <div class="howToUseLinkBox">
+        <div class="inHowToUseLinkBox">
+          <p><a>使い方</a></p>
+        </div>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+      <div class="signUpLinkBox">
+        <div class="inSignUpLinkBox">
+          <p><a>会員登録</a></p>
+        </div>
+        <i class="fas fa-chevron-right"></i>
+      </div>
+    </div>
   </div>
 </div>
 </div>

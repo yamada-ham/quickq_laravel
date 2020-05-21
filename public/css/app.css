@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -9,6 +11,9 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", YuGothic, "Yu Gothic", Verdana, Meiryo, sans-serif;
+}
+
+body#topBody {
   background-image: url(/images/background.jpg?56456cb432d0ef66236a4f943e645c2e);
   background-repeat: repeat;
   background-attachment: fixed;
@@ -435,6 +440,9 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li form input[type=submit] {
 footer {
   width: 100%;
   background: #717171;
+  position: absolute;
+  /*←絶対位置*/
+  top: 100%;
   box-sizing: border-box;
 }
 
@@ -684,6 +692,66 @@ div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.ic
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox div.subTextBox p span {
   border-bottom: 2px solid #45f261;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox {
+  margin-top: 20px;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox {
+  width: 45%;
+  background: red;
+  padding: 14px 4px;
+  border-radius: 8px;
+  position: relative;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox div.inHowToUseLinkBox p a {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox {
+  width: 45%;
+  background: blue;
+  padding: 14px 4px;
+  border-radius: 8px;
+  position: relative;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox div.inSignUpLinkBox p a {
+  display: block;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox i {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translate(0, -50%);
+  font-size: 1.3rem;
+  color: #fff;
 }
 
 ul.questLimitBox {
