@@ -184,7 +184,9 @@ div.topImgBox{
 }
 
 div.promotionBox{
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
+  padding-top:50px;
+  padding-bottom:50px;
   div.inPromotionBox{
     div.simpleFlowBox{
       div.inSimpleFlowBox{
@@ -221,14 +223,19 @@ div.promotionBox{
 }
 
 ul.questLimitBox{
-  background: #fff;
+  background: #e8eee7;
     @include media(m) {
         display: flex;
         justify-content: center;
         padding-bottom:4px;
       }
+      &:after{
+        @include clear;
+      }
   li{
     &.newListBox{
+      margin-top: 30px;
+      margin-bottom: 50px;
       @include media(m) {
           width:49%;
         }
@@ -237,6 +244,7 @@ ul.questLimitBox{
         margin-right: 4px;
         margin-bottom:10px;
         border:solid rgb(255, 209, 171) 6px;
+        background:#fff;
         border-radius: 20px;
         @include media(l){
           padding:8px;
@@ -289,11 +297,13 @@ ul.questLimitBox{
       }
     }
     &.popularListBox{
-      background: #fff;
+      margin-top: 30px;
+      margin-bottom: 50px;
       @include media(m) {
           width:49%;
         }
       div.inPpopularListBox{
+        background: #fff;
         margin-left: 4px;
         margin-right: 4px;
         margin-bottom:10px;

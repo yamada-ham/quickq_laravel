@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 * {
   padding: 0;
   margin: 0;
@@ -11,6 +9,10 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Hiragino Kaku Gothic ProN", YuGothic, "Yu Gothic", Verdana, Meiryo, sans-serif;
+  background-image: url(/images/background.jpg?56456cb432d0ef66236a4f943e645c2e);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-size: 50%;
 }
 
 li {
@@ -136,7 +138,6 @@ div.createBox p a img {
   min-height: 100vh;
   position: relative;
   box-sizing: border-box;
-  padding-bottom: 40px;
 }
 
 @-webkit-keyframes click-wave {
@@ -434,9 +435,6 @@ nav.drwerMenuBox div.inDrwerMenuBox ul li form input[type=submit] {
 footer {
   width: 100%;
   background: #717171;
-  position: absolute;
-  /*←絶対位置*/
-  bottom: 0;
   box-sizing: border-box;
 }
 
@@ -650,7 +648,9 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
 }
 
 div.promotionBox {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox {
@@ -687,7 +687,7 @@ div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.ic
 }
 
 ul.questLimitBox {
-  background: #fff;
+  background: #e8eee7;
 }
 
 @media only screen and (min-width: 767px) {
@@ -696,6 +696,17 @@ ul.questLimitBox {
     justify-content: center;
     padding-bottom: 4px;
   }
+}
+
+ul.questLimitBox:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+ul.questLimitBox li.newListBox {
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 767px) {
@@ -709,6 +720,7 @@ ul.questLimitBox li.newListBox div.inNewListBox {
   margin-right: 4px;
   margin-bottom: 10px;
   border: solid #ffd1ab 6px;
+  background: #fff;
   border-radius: 20px;
 }
 
@@ -763,7 +775,8 @@ ul.questLimitBox li.newListBox:nth-child(2) div.inNewListBox div h2 {
 }
 
 ul.questLimitBox li.popularListBox {
-  background: #fff;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 767px) {
@@ -773,6 +786,7 @@ ul.questLimitBox li.popularListBox {
 }
 
 ul.questLimitBox li.popularListBox div.inPpopularListBox {
+  background: #fff;
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 10px;

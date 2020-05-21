@@ -16,6 +16,10 @@ html{
 }
 body{
   font-family: -apple-system,BlinkMacSystemFont,"Helvetica Neue","Hiragino Kaku Gothic ProN",YuGothic,"Yu Gothic",Verdana,Meiryo,sans-serif;
+  background-image: url("../images/background.jpg");
+  background-repeat:repeat;
+  background-attachment: fixed;
+  background-size:50%;
 }
 
 li{
@@ -170,7 +174,6 @@ div.createBox{
   min-height: 100vh;
   position: relative;
    box-sizing: border-box;
-   padding-bottom: 40px;
 }
 @import 'parts/_keyframes';
 @import 'parts/_partHeader';
