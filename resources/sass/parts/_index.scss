@@ -285,20 +285,20 @@ div.promotionBox{
   }
 }
 
-ul.questLimitBox{
+div.questLimitBox{
+  padding-top:40px;
+  padding-bottom:40px;
   background: #e8eee7;
+ul.inQuestLimitBox{
     @include media(m) {
         display: flex;
         justify-content: center;
-        padding-bottom:4px;
       }
       &:after{
         @include clear;
       }
   li{
     &.newListBox{
-      margin-top: 30px;
-      margin-bottom: 50px;
       @include media(m) {
           width:49%;
         }
@@ -309,9 +309,7 @@ ul.questLimitBox{
         border:solid rgb(255, 209, 171) 6px;
         background:#fff;
         border-radius: 20px;
-        @include media(l){
-          padding:8px;
-        }
+        padding:8px;
         div{
           h2{
             display:inline-block;
@@ -321,7 +319,7 @@ ul.questLimitBox{
             padding:4px 8px;
             margin-top:4px;
             margin-bottom:14px;
-            margin-left:4px;
+            margin-left:10px;
             &:before{
               position: absolute;
               content: '';
@@ -360,8 +358,6 @@ ul.questLimitBox{
       }
     }
     &.popularListBox{
-      margin-top: 30px;
-      margin-bottom: 50px;
       @include media(m) {
           width:49%;
         }
@@ -372,9 +368,7 @@ ul.questLimitBox{
         margin-bottom:10px;
         border:solid rgb(255, 209, 171) 6px;
         border-radius: 20px;
-        @include media(l){
-          padding:8px;
-        }
+        padding:8px;
         div{
           h2{
             display:inline-block;
@@ -384,7 +378,7 @@ ul.questLimitBox{
             padding:4px 8px;
             margin-top:4px;
             margin-bottom:14px;
-            margin-left:4px;
+            margin-left:10px;
             &:before{
               position: absolute;
               content: '';
@@ -424,7 +418,7 @@ ul.questLimitBox{
     }
   }
 }
-
+}
 
 div.categoryBox{
   div.inCategoryBox{

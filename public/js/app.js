@@ -12832,8 +12832,8 @@ function () {
   }, {
     key: "questsLimitLength",
     value: function questsLimitLength() {
-      if ($("ul.questLimitBox").length > 0) {
-        var quests = document.querySelectorAll('ul.questLimitBox li.listBox div.inListBox ul li a');
+      if ($("div.questLimitBox").length > 0) {
+        var quests = document.querySelectorAll('div.questLimitBox li.listBox div.inListBox ul li a');
 
         if (window.innerWidth >= 1199) {
           quests.forEach(function (quest) {

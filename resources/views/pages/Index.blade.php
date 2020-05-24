@@ -115,8 +115,8 @@
 </div>
 </div>
 
-
-<ul class="questLimitBox">
+<div class="questLimitBox">
+<ul class="inQuestLimitBox">
   <li class="listBox newListBox">
     <div class="inListBox inNewListBox">
       <div><h2>最新アンケート</h2></div>
@@ -138,6 +138,7 @@
     </div>
   </li><!-- newListBox -->
 </ul>
+</div>
 <div class="categoryBox">
     <div class="inCategoryBox">
     <ul class="accordion_ul clear">

@@ -760,51 +760,42 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.sign
   color: #fff;
 }
 
-ul.questLimitBox {
+div.questLimitBox {
+  padding-top: 40px;
+  padding-bottom: 40px;
   background: #e8eee7;
 }
 
 @media only screen and (min-width: 767px) {
-  ul.questLimitBox {
+  div.questLimitBox ul.inQuestLimitBox {
     display: flex;
     justify-content: center;
-    padding-bottom: 4px;
   }
 }
 
-ul.questLimitBox:after {
+div.questLimitBox ul.inQuestLimitBox:after {
   content: "";
   display: block;
   clear: both;
 }
 
-ul.questLimitBox li.newListBox {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
 @media only screen and (min-width: 767px) {
-  ul.questLimitBox li.newListBox {
+  div.questLimitBox ul.inQuestLimitBox li.newListBox {
     width: 49%;
   }
 }
 
-ul.questLimitBox li.newListBox div.inNewListBox {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox {
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
   border: solid #ffd1ab 6px;
   background: #fff;
   border-radius: 20px;
+  padding: 8px;
 }
 
-@media only screen and (min-width: 991px) {
-  ul.questLimitBox li.newListBox div.inNewListBox {
-    padding: 8px;
-  }
-}
-
-ul.questLimitBox li.newListBox div.inNewListBox div h2 {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox div h2 {
   display: inline-block;
   position: relative;
   background: #fca4a4;
@@ -812,10 +803,10 @@ ul.questLimitBox li.newListBox div.inNewListBox div h2 {
   padding: 4px 8px;
   margin-top: 4px;
   margin-bottom: 14px;
-  margin-left: 4px;
+  margin-left: 10px;
 }
 
-ul.questLimitBox li.newListBox div.inNewListBox div h2:before {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox div h2:before {
   position: absolute;
   content: "";
   top: 100%;
@@ -825,56 +816,46 @@ ul.questLimitBox li.newListBox div.inNewListBox div h2:before {
   border-right: solid 15px #fca4a4;
 }
 
-ul.questLimitBox li.newListBox div.inNewListBox ul {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox ul {
   margin: 2px 8px;
 }
 
-ul.questLimitBox li.newListBox div.inNewListBox ul li {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox ul li {
   border-bottom: solid 1px #d0d0d0;
   margin-bottom: 6px;
 }
 
-ul.questLimitBox li.newListBox div.inNewListBox ul li a {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox ul li a {
   display: block;
   text-decoration: none;
   color: #0e00aa;
 }
 
-ul.questLimitBox li.newListBox div.inNewListBox ul li a:hover {
+div.questLimitBox ul.inQuestLimitBox li.newListBox div.inNewListBox ul li a:hover {
   color: #756be4;
 }
 
-ul.questLimitBox li.newListBox:nth-child(2) div.inNewListBox div h2 {
+div.questLimitBox ul.inQuestLimitBox li.newListBox:nth-child(2) div.inNewListBox div h2 {
   background: #94ccff;
 }
 
-ul.questLimitBox li.popularListBox {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
 @media only screen and (min-width: 767px) {
-  ul.questLimitBox li.popularListBox {
+  div.questLimitBox ul.inQuestLimitBox li.popularListBox {
     width: 49%;
   }
 }
 
-ul.questLimitBox li.popularListBox div.inPpopularListBox {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox {
   background: #fff;
   margin-left: 4px;
   margin-right: 4px;
   margin-bottom: 10px;
   border: solid #ffd1ab 6px;
   border-radius: 20px;
+  padding: 8px;
 }
 
-@media only screen and (min-width: 991px) {
-  ul.questLimitBox li.popularListBox div.inPpopularListBox {
-    padding: 8px;
-  }
-}
-
-ul.questLimitBox li.popularListBox div.inPpopularListBox div h2 {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox div h2 {
   display: inline-block;
   position: relative;
   background: #b3a4fc;
@@ -882,10 +863,10 @@ ul.questLimitBox li.popularListBox div.inPpopularListBox div h2 {
   padding: 4px 8px;
   margin-top: 4px;
   margin-bottom: 14px;
-  margin-left: 4px;
+  margin-left: 10px;
 }
 
-ul.questLimitBox li.popularListBox div.inPpopularListBox div h2:before {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox div h2:before {
   position: absolute;
   content: "";
   top: 100%;
@@ -895,26 +876,26 @@ ul.questLimitBox li.popularListBox div.inPpopularListBox div h2:before {
   border-right: solid 15px #aea4fc;
 }
 
-ul.questLimitBox li.popularListBox div.inPpopularListBox ul {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox ul {
   margin: 2px 8px;
 }
 
-ul.questLimitBox li.popularListBox div.inPpopularListBox ul li {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox ul li {
   border-bottom: solid 1px #d0d0d0;
   margin-bottom: 6px;
 }
 
-ul.questLimitBox li.popularListBox div.inPpopularListBox ul li a {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox ul li a {
   display: block;
   text-decoration: none;
   color: #0e00aa;
 }
 
-ul.questLimitBox li.popularListBox div.inPpopularListBox ul li a:hover {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox div.inPpopularListBox ul li a:hover {
   color: #756be4;
 }
 
-ul.questLimitBox li.popularListBox:nth-child(2) div.inNewListBox div h2 {
+div.questLimitBox ul.inQuestLimitBox li.popularListBox:nth-child(2) div.inNewListBox div h2 {
   background: #94ccff;
 }
 
