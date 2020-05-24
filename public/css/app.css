@@ -14,7 +14,7 @@ body {
 }
 
 body#topBody {
-  background-image: url(/images/background.jpg?56456cb432d0ef66236a4f943e645c2e);
+  background-image: url(/images/background.jpg?54626920c0759a0cefc71fb107c21257);
   background-repeat: repeat;
   background-attachment: fixed;
   background-size: 50%;
@@ -656,9 +656,9 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
 }
 
 div.promotionBox {
-  background: rgba(255, 255, 255, 0.8);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  padding-top: 120px;
+  padding-bottom: 60px;
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox {
@@ -676,7 +676,7 @@ div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.ic
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox {
-  color: #7ea371;
+  color: #f46969;
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox i {
@@ -685,17 +685,21 @@ div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.ic
   text-align: center;
 }
 
+div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox div.subTextBox {
+  margin-top: 14px;
+}
+
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox div.subTextBox p {
   text-align: center;
   font-size: 2rem;
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox div.subTextBox p span {
-  border-bottom: 1px solid #7ea371;
+  border-bottom: 1px solid #f46969;
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox {
@@ -703,14 +707,14 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox {
   flex-wrap: nowrap;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox {
   width: 45%;
-  background: red;
+  background: linear-gradient(#e76969 0%, #f1450e 100%);
   padding: 14px 4px;
   border-radius: 8px;
   position: relative;
@@ -719,7 +723,8 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howT
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox div.inHowToUseLinkBox p a {
   display: block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #fff;
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox i {
@@ -733,7 +738,7 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howT
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox {
   width: 45%;
-  background: blue;
+  background: linear-gradient(#92be83 0%, #6c9f58 100%);
   padding: 14px 4px;
   border-radius: 8px;
   position: relative;
@@ -742,7 +747,8 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.sign
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox div.inSignUpLinkBox p a {
   display: block;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  color: #fff;
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox i {
