@@ -141,6 +141,7 @@ div.createBox p a img {
 
 #app {
   min-height: 100vh;
+  padding-bottom: 30px;
   position: relative;
   box-sizing: border-box;
 }
@@ -181,7 +182,7 @@ div.createBox p a img {
 
 header {
   position: relative;
-  margin-bottom: 60px;
+  padding-bottom: 60px;
 }
 
 header div.inHeader {
@@ -442,7 +443,7 @@ footer {
   background: #717171;
   position: absolute;
   /*←絶対位置*/
-  top: 100%;
+  bottom: 0;
   box-sizing: border-box;
 }
 

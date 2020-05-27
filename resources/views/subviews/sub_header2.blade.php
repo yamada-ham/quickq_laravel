@@ -1,11 +1,11 @@
 <header class="">
   <div class="inHeader clear">
       <div class="drawer" id="menubtn">
-        <img src="{{asset("images/icon/btnOpen.png")}}">
+        <i class="fas fa-bars"></i>
       </div>
       <div class="inTitleBox">
         <h1><a href="{{action('IndexController@get')}}">
-          <img src="{{asset('images/quickq.png')}}" alt="{{Config('const.QUICKQ.name')}}">
+          <img src="{{asset('images/quickq_bl.png')}}" alt="{{Config('const.QUICKQ.name')}}">
         </a></h1>
       </div>
       {{-- <div class="loginInfoBox">

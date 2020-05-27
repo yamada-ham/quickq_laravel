@@ -14,7 +14,7 @@
 <div id="app">
 @include('subviews.sub_header2')
 @yield('content')
-{{-- @include('subviews.sub_footer') --}}
+@include('subviews.sub_footer')
 </div>
 <script src="{{asset('./js/app.js')}}"></script>
 </body>
