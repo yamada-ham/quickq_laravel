@@ -203,8 +203,11 @@ div.promotionBox{
             color:#f46969;
             i{
               display:block;
-              font-size:7.5rem;
+              font-size:4rem;
               text-align: center;
+              @include media(m){
+                font-size:7.5rem;
+              }
             }
             div.subTextBox{
               margin-top:14px;
@@ -241,8 +244,11 @@ div.promotionBox{
               a{
                 display: block;
                 text-align: center;
-                font-size:1.4rem;
+                font-size:1.2rem;
                 color:#fff;
+                @include media(m){
+                  font-size:1.4rem;
+                }
               }
             }
           }
@@ -251,8 +257,11 @@ div.promotionBox{
             top:50%;
             right:5%;
             transform: translate(0,-50%);
-            font-size:1.3rem;
+            font-size:1.1rem;
             color:#fff;
+            @include media(m){
+              font-size:1.3rem;
+            }
           }
         }
         div.signUpLinkBox{
@@ -266,8 +275,11 @@ div.promotionBox{
               a{
                 display: block;
                 text-align: center;
-                font-size:1.4rem;
+                font-size:1.2rem;
                 color:#fff;
+                @include media(m){
+                  font-size:1.4rem;
+                }
               }
             }
           }
@@ -276,8 +288,11 @@ div.promotionBox{
             top:50%;
             right:5%;
             transform: translate(0,-50%);
-            font-size:1.3rem;
+            font-size:1.1rem;
             color:#fff;
+            @include media(m){
+              font-size:1.3rem;
+            }
           }
         }
       }

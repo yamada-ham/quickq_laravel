@@ -681,8 +681,14 @@ div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.ic
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox i {
   display: block;
-  font-size: 7.5rem;
+  font-size: 4rem;
   text-align: center;
+}
+
+@media only screen and (min-width: 767px) {
+  div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox i {
+    font-size: 7.5rem;
+  }
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.iconBox div.inIconBox div.subTextBox {
@@ -723,8 +729,14 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howT
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox div.inHowToUseLinkBox p a {
   display: block;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #fff;
+}
+
+@media only screen and (min-width: 767px) {
+  div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox div.inHowToUseLinkBox p a {
+    font-size: 1.4rem;
+  }
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox i {
@@ -732,8 +744,14 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howT
   top: 50%;
   right: 5%;
   transform: translate(0, -50%);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #fff;
+}
+
+@media only screen and (min-width: 767px) {
+  div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox i {
+    font-size: 1.3rem;
+  }
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox {
@@ -747,8 +765,14 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.sign
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox div.inSignUpLinkBox p a {
   display: block;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #fff;
+}
+
+@media only screen and (min-width: 767px) {
+  div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox div.inSignUpLinkBox p a {
+    font-size: 1.4rem;
+  }
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox i {
@@ -756,8 +780,14 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.sign
   top: 50%;
   right: 5%;
   transform: translate(0, -50%);
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: #fff;
+}
+
+@media only screen and (min-width: 767px) {
+  div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox i {
+    font-size: 1.3rem;
+  }
 }
 
 div.questLimitBox {
