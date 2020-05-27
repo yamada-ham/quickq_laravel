@@ -185,8 +185,11 @@ div.topImgBox{
 
 div.promotionBox{
   background: rgba(255, 255, 255, 0.95);
-  padding-top:120px;
+  padding-top:80px;
   padding-bottom:60px;
+  @include media(m){
+    padding-top:120px;
+  }
   div.inPromotionBox{
     div.simpleFlowBox{
       div.inSimpleFlowBox{
@@ -224,7 +227,7 @@ div.promotionBox{
       }
     }
     div.inductionBox{
-      margin-top:40px;
+      margin-top:50px;
       div.inInductionBox{
         display:flex;
         flex-wrap: nowrap;

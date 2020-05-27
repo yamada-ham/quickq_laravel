@@ -657,8 +657,14 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
 
 div.promotionBox {
   background: rgba(255, 255, 255, 0.95);
-  padding-top: 120px;
+  padding-top: 80px;
   padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 767px) {
+  div.promotionBox {
+    padding-top: 120px;
+  }
 }
 
 div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox {
@@ -705,7 +711,7 @@ div.promotionBox div.inPromotionBox div.simpleFlowBox div.inSimpleFlowBox div.ic
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox {
-  margin-top: 40px;
+  margin-top: 50px;
 }
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox {
