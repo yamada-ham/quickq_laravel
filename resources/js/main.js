@@ -94,7 +94,7 @@ class Quickq{
   slide(){
     if($(".accordion_ul").length > 0){
       $(window).on("resize",()=>{
-        if(window.innerWidth >= 767){
+        if(window.innerWidth >= 767 && window.innerWidth <= 867){
           location.reload();
           return;
         }

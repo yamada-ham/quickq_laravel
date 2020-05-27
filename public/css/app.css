@@ -939,11 +939,16 @@ div.questLimitBox ul.inQuestLimitBox li.popularListBox:nth-child(2) div.inNewLis
   }
 }
 
+div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li {
+  background: #fff;
+}
+
 @media only screen and (min-width: 767px) {
   div.categoryBox div.inCategoryBox ul.accordion_ul li.accordion_li {
     float: left;
     width: 33%;
     padding-bottom: 4px;
+    background: none;
   }
 }
 

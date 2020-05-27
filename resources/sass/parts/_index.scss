@@ -446,10 +446,12 @@ div.categoryBox{
     }
     ul.accordion_ul{
       li.accordion_li{
+        background: #fff;
         @include media(m){
           float: left;
           width:33%;
           padding-bottom:4px;
+          background:none;
         }
         section{
           h1{
