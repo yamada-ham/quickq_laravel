@@ -389,52 +389,67 @@ nav.drwerMenuBox div.inDrwerMenuBox ul {
   margin-top: 6px;
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li {
-  margin-left: 10px;
-  margin-right: 10px;
+nav.drwerMenuBox div.inDrwerMenuBox ul.afterLoginBox li {
+  border-bottom: 1px solid #e6e6e6;
+  font-size: 0.9rem;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 20px;
+  color: #3c3c3c;
+}
+
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li {
   font-size: 1.1rem;
   margin-bottom: 14px;
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li:hover {
-  color: #2bff00;
-  text-decoration: underline;
-}
-
-nav.drwerMenuBox div.inDrwerMenuBox ul li.login {
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li.login {
+  margin-left: 10px;
+  margin-right: 10px;
   border-radius: 5%;
   font-size: 1rem;
   text-align: center;
   cursor: pointer;
   padding: 4px 0;
-  border-bottom: solid 2px #d27d00;
-  background: linear-gradient(#b7ff49 0%, #68ec00 100%);
+  border-bottom: solid 2px #267500;
+  background: #7ea371;
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
-  color: #000000;
-  margin-bottom: 30px;
+  margin-top: 26px;
+  margin-bottom: 26px;
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li.login:active {
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li.login:active {
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li.login a {
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li.login a {
   display: block;
+  color: #fff;
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li.signup {
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li.signup {
   text-decoration: none;
-  color: #000000;
   text-align: center;
-  background: #e7e9ec;
+  background: linear-gradient(#e76969 0%, #f1450e 100%);
+  border-bottom: solid 2px #ff7846;
   border: solid #a2a6ac 1px;
+  margin-left: 10px;
+  margin-right: 10px;
+  border-radius: 5%;
+  padding: 4px 0;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li.signup a {
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li.signup:active {
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li.signup a {
   display: block;
+  color: #fff;
 }
 
-nav.drwerMenuBox div.inDrwerMenuBox ul li form input[type=submit] {
+nav.drwerMenuBox div.inDrwerMenuBox ul.beforeLoginBox li form input[type=submit] {
   font-size: 1rem;
 }
 
@@ -727,7 +742,7 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox {
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howToUseLinkBox {
   width: 45%;
-  background: linear-gradient(#e76969 0%, #f1450e 100%);
+  background: linear-gradient(#f7b95a 0%, #ff9547 100%);
   padding: 14px 4px;
   border-radius: 8px;
   position: relative;
@@ -763,7 +778,7 @@ div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.howT
 
 div.promotionBox div.inPromotionBox div.inductionBox div.inInductionBox div.signUpLinkBox {
   width: 45%;
-  background: linear-gradient(#92be83 0%, #6c9f58 100%);
+  background: linear-gradient(#e76969 0%, #f1450e 100%);
   padding: 14px 4px;
   border-radius: 8px;
   position: relative;

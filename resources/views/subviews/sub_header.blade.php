@@ -52,7 +52,7 @@
     @if(!empty(Auth::user()->email_verified_at))
     @if(Auth::check())
       <h2 class="greet">Hello.{{Auth::user()->name}}さん</h2>
-      <ul>
+      <ul class="afterLoginBox">
       <li><a href="{{action('UserAccountController@get')}}">アカウント管理</a></li>
       <li><a href="{{action('CreateQuestController@get')}}">アンケートを作成する</a></li>
       <li><form action="{{ route('logout') }}" method="POST" id="logout">
@@ -63,9 +63,9 @@
       </ul>
     @endif
     @else
-      <ul>
+      <ul class="beforeLoginBox">
       <li class="login"><a href="{{ route('login') }}">ログイン</a></li>
-      <li class="signup"><a href="{{ route('register') }}">アカウント作成はこちら</a></li>
+      <li class="signup"><a href="{{ route('register') }}">会員登録</a></li>
       </ul>
     @endif
   </div>

@@ -106,7 +106,7 @@
       </div>
       <div class="signUpLinkBox">
         <div class="inSignUpLinkBox">
-          <p><a>会員登録</a></p>
+          <p><a href="{{ route('register') }}">会員登録</a></p>
         </div>
         <i class="fas fa-chevron-right"></i>
       </div>
