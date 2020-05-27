@@ -186,7 +186,7 @@ div.topImgBox{
 div.promotionBox{
   background: rgba(255, 255, 255, 0.95);
   padding-top:80px;
-  padding-bottom:60px;
+  padding-bottom:80px;
   @include media(m){
     padding-top:120px;
   }
@@ -238,7 +238,7 @@ div.promotionBox{
         margin-right: auto;
         div.howToUseLinkBox{
           width:45%;
-          background: linear-gradient(#f7b95a 0%,  #ff9547 100%);          
+          background: linear-gradient(#f7b95a 0%,  #ff9547 100%);
           padding:14px 4px;
           border-radius: 8px;
           position: relative;

@@ -674,7 +674,7 @@ div.topImgBox div.inTopImgBox div.contentsInTopImgBox div.inContentsInTopImgBox 
 div.promotionBox {
   background: rgba(255, 255, 255, 0.95);
   padding-top: 80px;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 
 @media only screen and (min-width: 767px) {
